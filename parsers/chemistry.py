@@ -1,10 +1,12 @@
+# парсинг идет со скорборда
 
 class YearResults:
 
-    def __init__(self):
+    def __init__(self, file, isRoundsPresent):
         self.placeToStud = {}
         self.countryToStud = {}
-        pass
+        self.path = file
+        self.isRoundsPresent = isRoundsPresent
 
     def parse_html(self, file):
         file = open(file, 'r').readlines()[0]
@@ -21,7 +23,7 @@ class YearResults:
                 medal = elts[5].split('medal">')[-1].split('</div>')[0]
             else:
                 medal = None
-            print(place, country, name, score, medal)
+            # print(place, country, name, score, medal)
             if country not in self.countryToStud:
                 self.countryToStud[country] = []
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
@@ -48,7 +50,8 @@ class YearResults:
                 medal = None
             if place:
                 # print(elts)
-                print(place, country, name, score, medal)
+                # print(place, country, name, score, medal)
+                pass
             if country not in self.countryToStud:
                 self.countryToStud[country] = []
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
@@ -63,11 +66,15 @@ class YearResults:
         scores = list(countryToScore.values())
         scores.sort(reverse=True)
         
+        placeToCountry, countryToPlace = {}, {}
         for i, score in enumerate(scores):
             for country, val in countryToScore.items():
                 if score == val:
                     break
-            print(f'#{i+1}. {country}. {val}')
+            # print(f'#{i+1}. {country}. {val}')
+            placeToCountry[i+1] = country
+            countryToPlace[country] = i+1
+        return placeToCountry, countryToPlace
         
     def main(self):
         # self.parse_html('data/2021.html')
@@ -79,11 +86,30 @@ class YearResults:
         # self.parse_html('data/2015.html')
         # self.parse_html_rounds('data/2014.html')
         # self.parse_html_rounds('data/2013.html')
-        self.parse_html_rounds('data/2010.html')
-        self.build_rating_based_on_score()
+        # self.parse_html_rounds('data/2010.html')
+        if self.isRoundsPresent:
+            self.parse_html_rounds(self.path)
+        else:
+            self.parse_html(self.path)
+        return self.build_rating_based_on_score()
 
-yr = YearResults()
-yr.main()
+def export_ratings_based_on_score(countries):
+    BASE = 'data/chemistry/'
+    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
+    # YEARS = '2018'
+    yearToPlace = {}
+    for year_and_bool in YEARS.split(' '):
+        year, prebool = year_and_bool.split('|')
+        if prebool == 'T': actbool = True
+        else: actbool = False
+        yr = YearResults(BASE + f'{year}.html', actbool)
+        placeToCountry, countryToPlace = yr.main()
+        yearToPlace[year] = {}
+        for country in countries:
+            if country in countryToPlace: #funny - uzbekistan didn't participate in 2010
+                yearToPlace[year][country] = countryToPlace[country]
+        yearToPlace[year]['total'] = len(countryToPlace.keys())
+    return yearToPlace
 
 # 2021 - 21/79
 # 2020 - 27/59
@@ -97,3 +123,6 @@ yr.main()
 # 2012 - no scores
 # 2011 - no scores
 # 2010 - 31/68
+
+# o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
+# print(o)
