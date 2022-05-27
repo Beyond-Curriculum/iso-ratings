@@ -23,6 +23,7 @@ class SubjectRating:
                 ),
             ),
             yaxis=dict(
+                autorange='reversed',
                 title=yAxis,
                 showgrid=False,
                 zeroline=False,
@@ -92,4 +93,4 @@ class SubjectRating:
 
 
 chemObj = SubjectRating(parsers.chemistry)
-chemObj.plot(('KZ', 'UZ', 'RU'))
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'))
