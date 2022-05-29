@@ -92,4 +92,4 @@ class SubjectRating:
 
 
 mathObj = SubjectRating(parsers.mathematics)
-mathObj.plot(('KZ', 'HK', 'KP', 'total'))
+mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
