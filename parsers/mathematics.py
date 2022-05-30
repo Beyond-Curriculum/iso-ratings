@@ -1,4 +1,3 @@
-# ������� ���� �� ���������
 
 class YearResults:
 
@@ -95,7 +94,7 @@ class YearResults:
 
 def export_ratings_based_on_score(countries):
     BASE = 'data/mathematics/'
-    YEARS = '2021|T 2020|T 2019|T 2018|T 2017|T 2016|T 2015|T 2014|T 2013|T 2010|T'
+    YEARS = '2021|T 2020|T 2019|T 2018|T 2017|T 2016|T 2015|T 2014|T 2013|T 2012|T 2011|T 2010|T'
     # YEARS = '2018'
     yearToPlace = {}
     for year_and_bool in YEARS.split(' '):

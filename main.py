@@ -1,10 +1,13 @@
 import parsers.chemistry
+import parsers.mathematics
 import plotly.graph_objects as go
 
 class SubjectRating:
 
-    def __init__(self, parser):
+    def __init__(self, parser, subject):
         self.parser = parser.export_ratings_based_on_score
+        self.subject = subject
+        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO'}
 
     def _update_fig(self, figure, title, xAxis, yAxis):
         figure.update_layout(
@@ -82,15 +85,18 @@ class SubjectRating:
             traces.append(trace)
         
         for trace in traces: fig.add_trace(trace)
-        self._update_fig(fig, 'Командный рейтинг на IChO', 'Год', 'Место в рейтинге')
+        self._update_fig(fig, f'Командный рейтинг на {self.subjToOl[self.subject]}', 'Год', 'Место в рейтинге')
 
-        with open(f'exports/html/chemistry.html', 'w') as f:
+        with open(f'exports/html/{self.subject}.html', 'w') as f:
             f.write(fig.to_html(include_plotlyjs='cdn'))
-        fig.write_image(f'exports/svg/chemistry.svg')
-        fig.write_image(f'exports/pdf/chemistry.pdf')
-        fig.write_image(f'exports/jpg/chemistry.jpg', scale=5.0)
+        fig.write_image(f'exports/svg/{self.subject}.svg')
+        fig.write_image(f'exports/pdf/{self.subject}.pdf')
+        fig.write_image(f'exports/jpg/{self.subject}.jpg', scale=5.0)
 
 
 
-chemObj = SubjectRating(parsers.chemistry)
+chemObj = SubjectRating(parsers.chemistry, 'chemistry')
 chemObj.plot(('KZ', 'UZ', 'RU', 'total'))
+
+mathObj = SubjectRating(parsers.mathematics, 'mathematics')
+mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
