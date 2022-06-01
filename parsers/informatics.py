@@ -7,19 +7,20 @@ class YearResults:
         self.isRoundsPresent = isRoundsPresent
 
     def parse(self, file):
+        print(file)
         file = open(file, 'r').readlines()
         arifcount = len(file)
         for it in range(0, arifcount, 5):
-        	place = file[it]
-        	country = file[it + 1]
-        	name = file[it + 2]
-        	score = float(file[it + 3])
-        	medal = file[it + 4]
-        	if country not in self.countryToStud:
-        		self.countryToStud[country] = []
-        	student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
-        	self.countryToStud[country].append(student)
-        	self.placeToStud[place] = student
+            place = file[it]
+            country = file[it + 1]
+            name = file[it + 2]
+            score = float(file[it + 3])
+            medal = file[it + 4]
+            if country not in self.countryToStud:
+                self.countryToStud[country] = []
+            student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
+            self.countryToStud[country].append(student)
+            self.placeToStud[place] = student
     
     def build_rating_based_on_score(self):
         countryToScore = {}
@@ -62,7 +63,7 @@ def export_ratings_based_on_score(countries):
         year, prebool = year_and_bool.split('|')
         if prebool == 'T': actbool = True
         else: actbool = False
-        yr = YearResults(BASE + f'{year}.out', 1)
+        yr = YearResults(BASE + f'{year}.txt', 1)
         placeToCountry, countryToPlace = yr.main()
         yearToPlace[year] = {}
         for country in countries:
@@ -72,5 +73,5 @@ def export_ratings_based_on_score(countries):
     return yearToPlace
 
 
-#o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
+o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
 #print(o)

@@ -1,5 +1,6 @@
 import parsers.chemistry
 import parsers.mathematics
+import parsers.informatics
 import plotly.graph_objects as go
 
 class SubjectRating:
@@ -100,3 +101,6 @@ chemObj.plot(('KZ', 'UZ', 'RU', 'total'))
 
 mathObj = SubjectRating(parsers.mathematics, 'mathematics')
 mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
+
+csObj = SubjectRating(parsers.informatics, 'informatics')
+csObj.plot(('KZ', 'UZ', 'RU', 'total'))
