@@ -1,0 +1,1690 @@
+1
+US
+Benjamin Qi	
+499	
+Gold
+2
+CN
+Maolong Yang	
+469	
+Gold
+3
+CN
+Zhenting Zhu	
+466	
+Gold
+4
+GE
+Nikoloz Birkadze	
+463	
+Gold
+5
+BY
+Aliaksandr Kernazhytski	
+430	
+Gold
+6
+CN
+Jianglun Chen	
+428	
+Gold
+7
+JP
+Wataru Inoue	
+428	
+Gold
+8
+TR
+Atacan Iyidogan	
+404	
+Gold
+9
+US
+Eric Zhang	
+397	
+Gold
+10
+VN
+Duc Thang Pham	
+390	
+Gold
+11
+RU
+Ramazan Rakhmatullin	
+383	
+Gold
+12
+KR
+Younghun Roh	
+373	
+Gold
+13
+US
+Spencer Compton	
+369	
+Gold
+14
+IL
+Nir Shalmon	
+367	
+Gold
+15
+MY
+Zi Song Yeoh	
+367	
+Gold
+16
+GE
+Giorgi Kldiashvili	
+365	
+Gold
+17
+KR
+Taekyu Kang	
+362	
+Gold
+18
+JP
+Masataka Yoneda	
+362	
+Gold
+19
+KR
+Sebin Kim	
+360	
+Gold
+20
+BY
+Andrei Nekrashevich	
+359	
+Gold
+21
+SG
+Gabriel Kheng Lin Goh	
+353	
+Gold
+22
+RU
+Vladimir Romanov	
+353	
+Gold
+23
+PL
+Mariusz Trela	
+347	
+Gold
+24
+CN
+Xuandi Ren	
+344	
+Gold
+25
+BG
+Aleksandar Krastev	
+343	
+Gold
+26
+PL
+Anadi Agrawal	
+336	
+Gold
+27
+AR
+Carlos Miguel Soto	
+336	
+Gold
+28
+UA
+Daniil Smelskyi	
+336	
+Gold
+29
+CA
+Joey Yu	
+336	
+Gold
+30
+IR
+Mohammad Mahdavi	
+336	
+Gold
+31
+FR
+Theophane Vallaeys	
+334	
+Silver
+32
+AU
+Jerry Mao	
+333	
+Silver
+33
+AU
+Albert Smith	
+330	
+Silver
+34
+RO
+Alex Tatomir	
+326	
+Silver
+35
+AU
+Angus Ritossa	
+326	
+Silver
+36
+RU
+Mikhail Anoprenko	
+326	
+Silver
+37
+ID
+Steven Wijaya	
+326	
+Silver
+38
+VN
+Xuan Nhat Hoang	
+325	
+Silver
+39
+SE
+Fredrik Ekholm	
+324	
+Silver
+40
+FR
+Etienne Rossignol	
+323	
+Silver
+41
+RO
+Tiberiu-Ioan Mu?at	
+322	
+Silver
+42
+JP
+Hirotaka Yoneda	
+320	
+Silver
+43
+ID
+Abdul Malik Nurrokhman	
+319	
+Silver
+44
+SG
+Jacob Por Loong Teo	
+316	
+Silver
+45
+UA
+Nazarii Denha	
+316	
+Silver
+46
+LT
+Tautvydas Jasiunas	
+314	
+Silver
+47
+MK
+Vladimir Maksimovski	
+314	
+Silver
+48
+CA
+Victor Rong	
+310	
+Silver
+49
+IL
+Roee Sinai	
+308	
+Silver
+50
+TW
+Shih-Yu Wang	
+308	
+Silver
+51
+HU
+Attila Gaspar	
+305	
+Silver
+52
+JP
+Yasutaka Hiraki	
+305	
+Silver
+53
+LT
+Martynas Sinkievic	
+304	
+Silver
+54
+KZ
+Daniyar Zakarin	
+303	
+Silver
+55
+RS
+Pavle Martinovic	
+303	
+Silver
+56
+BD
+Tasmeem Reza	
+303	
+Silver
+57
+BY
+Stanislau Tsitsianok	
+302	
+Silver
+58
+SE
+Bjorn Magnusson	
+300	
+Silver
+59
+TW
+Dao-Yun Peng	
+297	
+Silver
+60
+HR
+Josip Klepec	
+296	
+Silver
+61
+KR
+Gyojun Youn	
+295	
+Silver
+62
+SG
+Jeffrey Chun Hean Lee	
+295	
+Silver
+63
+CU
+David Manuel Garcia Aguilera	
+294	
+Silver
+64
+RU
+Egor Lifar	
+294	
+Silver
+65
+IR
+Keivan Rezaei	
+294	
+Silver
+66
+TW
+Kuan-Yu Chen	
+294	
+Silver
+67
+BY
+Mark Karneichyk	
+294	
+Silver
+68
+FI
+Juha Harviainen	
+293	
+Silver
+69
+PH
+Dan Baterisna	
+292	
+Silver
+70
+JP
+Hiroaki Hosokawa	
+291	
+Silver
+71
+RO
+?tefan Constantin-Buliga	
+291	
+Silver
+72
+BR
+Gabriel Simoes	
+290	
+Silver
+73
+CA
+Zixiang Zhou	
+289	
+Silver
+74
+GB
+Shaun Marshall	
+288	
+Silver
+75
+CA
+Ava Pun	
+287	
+Silver
+76
+PL
+Kacper Kluk	
+287	
+Silver
+77
+HR
+Paula Vidas	
+287	
+Silver
+78
+DE
+Tobias Schindler	
+287	
+Silver
+79
+TW
+Wei-Han Chen	
+287	
+Silver
+80
+TJ
+Farkhod Khakimiyon	
+284	
+Silver
+81
+PT
+Kevin Pucci	
+284	
+Silver
+82
+IR
+Mehrdad Saberi	
+280	
+Silver
+83
+UA
+Sofiia Melnyk	
+280	
+Silver
+84
+GR
+Charilaos Pipis	
+273	
+Silver
+85
+HK
+Rahul Arya	
+273	
+Silver
+86
+TH
+Sanchayapol Lewgasamsarn	
+273	
+Silver
+87
+ID
+Ahmad Haulian Yoga Pratama	
+272	
+Silver
+88
+HK
+Lok Kan Yuen	
+271	
+Bronze
+89
+EE
+Martin Sirokov	
+270	
+Bronze
+90
+CZ
+Josef Minarik	
+269	
+Bronze
+91
+LV
+Roberts Leonars Svarinskis	
+266	
+Bronze
+92
+IT
+Federico Stazi	
+265	
+Bronze
+93
+TH
+Thanadol Chomphoochan	
+265	
+Bronze
+94
+JP
+Ikumi Shimizu	
+264	
+Bronze
+95
+LT
+Gediminas Lelesius	
+263	
+Bronze
+96
+NL
+Arend Mellendijk	
+262	
+Bronze
+97
+KZ
+Nurbakyt Madibek	
+262	
+Bronze
+98
+RO
+Costin-Andrei Oncescu	
+260	
+Bronze
+99
+FR
+Victor Deng	
+260	
+Bronze
+100
+GR
+Anastasios Panagopoulos	
+259	
+Bronze
+101
+FR
+Arthur Leonard	
+259	
+Bronze
+102
+JP
+Riku Kishida	
+259	
+Bronze
+103
+MD
+Alexandru Rudi	
+256	
+Bronze
+104
+TR
+Caner Demirer	
+256	
+Bronze
+105
+MD
+Gabriel Cojocaru	
+256	
+Bronze
+106
+SK
+Martin Melicher	
+255	
+Bronze
+107
+JO
+Mohammad Alkilani	
+255	
+Bronze
+108
+HU
+Zoltan Gabor Molnar-Saska	
+254	
+Bronze
+109
+MN
+Tenuun Olonbaatar	
+253	
+Bronze
+110
+IT
+Fabio Pruneri	
+252	
+Bronze
+111
+BG
+Radoslav Dimitrov	
+250	
+Bronze
+112
+RS
+Tadija Sebez	
+250	
+Bronze
+113
+IR
+Seyed Mahdi Sadegh Shobeiri	
+248	
+Bronze
+114
+CL
+Willem Stuijt	
+248	
+Bronze
+115
+IT
+Luca Cavalleri	
+244	
+Bronze
+116
+IL
+Noam Gutterman	
+244	
+Bronze
+117
+CZ
+Pavel Hudec	
+244	
+Bronze
+118
+EE
+Richard Luhtaru	
+244	
+Bronze
+119
+GR
+Evangelos Pipis	
+242	
+Bronze
+120
+SK
+Ondrej Baranovic	
+242	
+Bronze
+121
+SK
+Paulina Smolarova	
+240	
+Bronze
+122
+UA
+Adalbert Makarovych	
+239	
+Bronze
+123
+TH
+Jirayu Burapacheep	
+236	
+Bronze
+124
+PL
+Dawid Jamka	
+234	
+Bronze
+125
+MX
+Diego Garcia Rodriguez del Campo	
+233	
+Bronze
+126
+JP
+Koichi Namekata	
+233	
+Bronze
+127
+HR
+Leonard Inkret	
+232	
+Bronze
+128
+TR
+Mehmet Hamza Erol	
+232	
+Bronze
+129
+NO
+Havard Rognebakke Krogstie	
+230	
+Bronze
+130
+SY
+Mohamad Dwik	
+230	
+Bronze
+131
+ID
+Muhammad Salman Al Farisi	
+230	
+Bronze
+132
+EG
+Mohamed Ehab	
+228	
+Bronze
+133
+SI
+Gregor Kikelj	
+226	
+Bronze
+134
+US
+William Hu	
+226	
+Bronze
+135
+VN
+Hoang Hai Minh Nguyen	
+225	
+Bronze
+136
+TH
+Milin Kodnongbua	
+221	
+Bronze
+137
+TM
+Kerim Kochekov	
+220	
+Bronze
+138
+CZ
+Michal Jires	
+220	
+Bronze
+139
+GB
+Basim Khajwal	
+219	
+Bronze
+140
+SG
+Hua Jun Teow	
+219	
+Bronze
+141
+RS
+Aleksa Milisavljevic	
+218	
+Bronze
+142
+SY
+Ahmad Haidar	
+217	
+Bronze
+143
+DE
+Erik Sunderhauf	
+217	
+Bronze
+144
+BG
+Martin Kopchev	
+217	
+Bronze
+145
+NL
+Ernest Van Wijland	
+216	
+Bronze
+146
+GB
+Harvey Yau	
+216	
+Bronze
+147
+VN
+Khanh Nguyen	
+216	
+Bronze
+148
+HK
+Harris Leung	
+215	
+Bronze
+149
+IT
+Andrea Ciprietti	
+214	
+Bronze
+150
+ES
+Alexander Vidal Zhukova	
+213	
+Bronze
+151
+DE
+Florian Jungermann	
+213	
+Bronze
+152
+TN
+Nader Jemel	
+209	
+Bronze
+153
+CH
+Nicolas Camenisch	
+209	
+Bronze
+154
+EE
+Toomas Tennisberg	
+206	
+Bronze
+155
+NO
+Birk Tjelmeland	
+205	
+Bronze
+156
+HU
+Orsolya Lili Janzer	
+205	
+Bronze
+157
+BD
+Rezwan Arefin	
+205	
+Bronze
+158
+CL
+Daniel Baez	
+204	
+Bronze
+159
+IE
+Kieran Horgan	
+204	
+Bronze
+160
+HU
+Aron Noszaly	
+204	
+Bronze
+161
+LV
+Renats Jursevskis	
+203	
+Bronze
+162
+KZ
+Sanzhar Bidaibek	
+203	
+Bronze
+163
+BG
+Viktor Terziev	
+201	
+Bronze
+164
+TR
+Yusuf K?l?carslan	
+201	
+Bronze
+165
+MK
+Andrej Velichkovski	
+200	
+Bronze
+166
+LV
+Eduards Gankins	
+199	
+Bronze
+167
+SE
+Hugo Eberhard	
+196	
+Bronze
+168
+AR
+Lautaro Lasorsa	
+196	
+Bronze
+169
+LV
+Ilja Caikovskis	
+192	
+Bronze
+170
+KZ
+Nurlykhan Kairly	
+189	
+Bronze
+171
+ES
+Felix Moreno Penarrubia	
+187	
+Bronze
+172
+GE
+Aleksandre Khokhiashvili	
+185	
+None
+174
+BD
+Mamnoon Siam	
+183	
+None
+175
+BR
+Ivan Carvalho	
+182	
+None
+176
+BE
+Arthur Massar	
+181	
+None
+177
+GB
+Fox Thomson	
+181	
+None
+178
+JO
+Muhannad Alwarawreh	
+179	
+None
+179
+AZ
+Abutalib Namazov	
+178	
+None
+180
+CY
+Charalampos Georgiou	
+176	
+None
+181
+MK
+Martin Dinev	
+175	
+None
+182
+SI
+Urban Duh	
+174	
+None
+183
+PH
+CJ Quines	
+173	
+None
+184
+HK
+Long Huen Chan	
+173	
+None
+185
+NL
+Reijer van Harten	
+173	
+None
+186
+RS
+Aleksa Milojevic	
+172	
+None
+187
+AT
+Robin Gugel	
+172	
+None
+188
+SI
+Tim Postuvan	
+171	
+None
+189
+AM
+Vahan Martirosyan	
+170	
+None
+190
+HR
+Dominik Fistric	
+169	
+None
+191
+ZA
+Mohammed Taariq Mowzer	
+169	
+None
+192
+BD
+Ruhan Habib	
+169	
+None
+193
+CL
+Ignacio Munoz	
+167	
+None
+194
+AT
+Niklas Hauber	
+165	
+None
+195
+CH
+Bibin Muttappillil	
+164	
+None
+196
+IL
+Idan Izmirli	
+164	
+None
+197
+IN
+Adhyyan Sekhsaria	
+162	
+None
+198
+SE
+Erik Amirell Eklof	
+162	
+None
+199
+DK
+Christian Bertram	
+160	
+None
+200
+GE
+Vano Gamezardashvili	
+160	
+None
+201
+KG
+Omurbek Dzhamalov	
+159	
+None
+202
+ES
+Javier Lopez-Contreras Gonzalez	
+157	
+None
+203
+MX
+Julian Rodriguez Cardenas	
+156	
+None
+204
+MN
+Tugsgerel Lkhagvasuren	
+156	
+None
+205
+DE
+Janine Lohse	
+154	
+None
+206
+CL
+Luciano Massa	
+154	
+None
+207
+AZ
+Ziya Mukhtarov	
+154	
+None
+208
+MN
+Batmend Batsaikhan	
+153	
+None
+209
+AT
+Otto Winter	
+153	
+None
+210
+KG
+Akbarzhon Madaminov	
+152	
+None
+211
+SK
+Jozef Fulop	
+152	
+None
+212
+BR
+Matheus Viana	
+152	
+None
+213
+SY
+Tamer Emad	
+152	
+None
+214
+ZA
+Ralph McDougall	
+150	
+None
+215
+BA
+Muamer Paric	
+148	
+None
+216
+AM
+Aleksandr Abelyan	
+147	
+None
+217
+CU
+Brayan Duran Medina	
+147	
+None
+218
+EG
+Mahmoud Adel	
+147	
+None
+219
+CO
+Roger Trujillo	
+147	
+None
+220
+BE
+Bruno Ploumhans	
+146	
+None
+221
+BA
+Drago Smitran	
+146	
+None
+222
+DK
+David Rasmussen Lolck	
+143	
+None
+223
+MD
+Corneliu Pa?a	
+141	
+None
+224
+MX
+Jose Angel Cazares Torres	
+139	
+None
+225
+GR
+Dimitrios Rontogiannis	
+137	
+None
+226
+PH
+Franz Louis Cesista	
+136	
+None
+227
+CY
+Angelos Assos	
+132	
+None
+228
+ZA
+Tian Cilliers	
+128	
+None
+229
+UZ
+Asadullo Ganiev	
+126	
+None
+230
+EG
+Mahmoud Badawy	
+125	
+None
+231
+SY
+Murhaf Alawir	
+125	
+None
+232
+DK
+Alexander Skovsende	
+122	
+None
+233
+NL
+Robert Koprinkov	
+120	
+None
+234
+MK
+Filip Mihov	
+119	
+None
+235
+IE
+John Ryan	
+119	
+None
+236
+BE
+Oscar Jocque	
+116	
+None
+237
+CH
+Valentin Imbach	
+115	
+None
+238
+BE
+Sebastian Weiermann	
+114	
+None
+239
+SI
+Tevz Lotric	
+113	
+None
+240
+PT
+David Nassauer	
+112	
+None
+241
+BA
+Vladan Cvjetkovic	
+112	
+None
+242
+IN
+Ramchandra Kishor Apte	
+110	
+None
+243
+MO
+Iat Long Iong	
+109	
+None
+244
+NO
+Ole Marius Strohm	
+109	
+None
+245
+MY
+Jia Jun Lee	
+106	
+None
+246
+ME
+Kosta Vukicevic	
+106	
+None
+247
+EG
+Mohamed Otefi	
+106	
+None
+248
+LT
+Rokas Urbonas	
+104	
+None
+249
+FI
+Roope Salmi	
+103	
+None
+250
+PS
+Akram Sbaih	
+102	
+None
+251
+AU
+Jacob Smith	
+102	
+None
+252
+ES
+Max Balsells I Pamies	
+102	
+None
+253
+LU
+Stanislas Briaud	
+99	
+None
+254
+MY
+Jia Qing Tan	
+97	
+None
+255
+MN
+Nyamdavaa Amar	
+97	
+None
+256
+CZ
+Martin Kurecka	
+92	
+None
+257
+MY
+Wei Xin Tan	
+92	
+None
+258
+EE
+Andres Alumets	
+87	
+None
+259
+NO
+Jon-Magnus Rosenblad	
+87	
+None
+260
+BR
+Joao Araujo	
+87	
+None
+261
+KG
+Talantbek Zhenishbek uulu	
+87	
+None
+262
+JO
+Khaleel Al-Adhami	
+85	
+None
+263
+MD
+Claudiu Babin	
+81	
+None
+264
+MX
+Hector Fernando Ricardez Lara	
+81	
+None
+265
+JO
+Ahmad Naser	
+80	
+None
+266
+CU
+Karel Diaz Vergara	
+76	
+None
+267
+AM
+Alen Adamyan	
+75	
+None
+268
+PT
+Andre Guimaraes	
+74	
+None
+269
+MA
+Anouar Achghaf	
+69	
+None
+270
+PT
+Diogo Rodrigues	
+68	
+None
+271
+TJ
+Khusrav Ashurzoda	
+64	
+None
+272
+FI
+Siiri Kuoppala	
+64	
+None
+273
+NZ
+Zhiyuan Qi	
+64	
+None
+274
+UZ
+Ilnur Baykov	
+62	
+None
+275
+BO
+Pablo Miguel Delgado Borda	
+62	
+None
+276
+AZ
+Rafail Saddatimov	
+62	
+None
+277
+CO
+Oscar Sierra	
+61	
+None
+278
+MO
+Guohao Ou	
+60	
+None
+279
+AZ
+Murad Eynizada	
+60	
+None
+280
+LU
+Pascal Ginter	
+60	
+None
+281
+FI
+Santeri Toivonen	
+60	
+None
+282
+KG
+Shabdan Batyrkulov	
+60	
+None
+283
+AM
+Gagik Magakyan	
+58	
+None
+284
+TN
+Rafik Hachana	
+55	
+None
+285
+AR
+Sebastian Mestre	
+54	
+None
+286
+BA
+Stevo Mitric	
+54	
+None
+287
+IN
+Mohammad Zaid	
+53	
+None
+288
+TN
+Aya Ben Saad	
+52	
+None
+289
+UZ
+Behruz Azam	
+52	
+None
+290
+CY
+Evripidis Papaevripidis	
+52	
+None
+291
+NZ
+Maayan Levy	
+52	
+None
+292
+LU
+Jarod Differdange	
+48	
+None
+293
+NZ
+Ivan Solovyev	
+47	
+None
+294
+BO
+Luis Javier Quispe Ramirez	
+47	
+None
+295
+PH
+Andrew James Ting	
+46	
+None
+296
+IE
+Oisin O'Duibhir	
+46	
+None
+297
+IE
+Caolan Fleming	
+45	
+None
+298
+TJ
+Davlathoja Magzumov	
+45	
+None
+299
+ZA
+Emile Tredoux	
+45	
+None
+300
+CH
+Elias Boschung	
+43	
+None
+301
+LK
+Shenal Santhush Kotuwewatta	
+43	
+None
+302
+SV
+Manuel Vides	
+37	
+None
+303
+DK
+Oliver Stenberg Jakobsen	
+37	
+None
+304
+CO
+Cesar Diaz	
+36	
+None
+305
+LK
+Sithija Abhishek Kotuwewatta	
+35	
+None
+306
+IS
+Gamithra Marga	
+34	
+None
+307
+TN
+Omar Besbes	
+32	
+None
+308
+IS
+Bjarni Dagur Thor Karason	
+31	
+None
+309
+IN
+Choudhury Istasis Mishra	
+31	
+None
+310
+TJ
+Akmal Mamadshoev	
+30	
+None
+311
+BO
+Marcelo Leonardo Flores Zeballos	
+30	
+None
+312
+DO
+Paul Anthony Ramirez Cabrera	
+30	
+None
+313
+UZ
+Shokhrukhbek Mamadaliev	
+30	
+None
+314
+DO
+Viktor Alexandrovich Rozenko Voitenko	
+30	
+None
+315
+CO
+Nicolas Galindo	
+21	
+None
+316
+AT
+Markus Walder	
+16	
+None
+317
+CY
+Andreas Kalavas	
+15	
+None
+318
+DO
+Carlos Bienvenido Ogando Montas	
+14	
+None
+319
+MA
+Houssam Hanafi	
+14	
+None
+320
+SV
+Jose Ramirez	
+14	
+None
+321
+NZ
+Ryan King	
+14	
+None
+322
+DO
+Arturo Aurelio Hernandez Rodriguez	
+12	
+None
+323
+SV
+Jose Rodrigo Santamaria	
+12	
+None
+324
+MA
+Anass Choukri	
+10	
+None
+325
+SV
+Darwin Piche	
+10	
+None
+326
+NG
+Elyon Osariemwen Nosa-Aifesehi	
+10	
+None
+327
+ME
+Filip Radovic	
+10	
+None
+328
+LK
+Hashan Rajapaksha	
+10	
+None
+329
+LU
+Raffael Marth	
+10	
+None
+330
+BO
+Roger Danilo Enriquez Corrales	
+10	
+None
+331
+MO
+Wai Seng Kou	
+6	
+None
+332
+VE
+Ana Paula De Sousa Martin	
+5	
+None
+333
+MA
+Bilal Elbouardi	
+5	
+None
+334
+MO
+Fu Yu Lin	
+2	
+None
+335
+PS
+Arees' Noubani	
+0	
+None
+336
+LK
+Ashan Rathnaweera	
+0	
+None
+337
+NG
+Glory OluwaTimilehin Akinbile	
+0	
+None
+338
+NG
+Joel Chibueze Ndoh	
+0	
+None
+339
+PS
+Mohammed Natour	
+0
+None

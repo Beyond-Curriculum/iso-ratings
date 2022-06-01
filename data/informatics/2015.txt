@@ -1,0 +1,1605 @@
+1
+KR
+Jeehak Yoon	
+600	
+Gold
+2
+RU
+Mikhail Ipatov	
+561	
+Gold
+3
+US
+Andrew He	
+555.72	
+Gold
+4
+CN
+Yuhao Du	
+551	
+Gold
+5
+AU
+Ishraq Huda	
+548.42	
+Gold
+6
+IR
+Ali Haghani	
+520.02	
+Gold
+7
+KR
+Sunghyeon Jo	
+518.11	
+Gold
+8
+CN
+Hengjie Zhang	
+509.42	
+Gold
+9
+CA
+Jacob Jackson	
+506.45	
+Gold
+10
+RU
+Vladislav Makeev	
+505.42	
+Gold
+11
+CN
+Xiaochen Lu	
+505.42	
+Gold
+12
+JP
+Yuta Takaya	
+505.42	
+Gold
+13
+RU
+Mikhail Putilin	
+498.51	
+Gold
+14
+BG
+Hristo Venev	
+495	
+Gold
+15
+IR
+Ali Bahjati	
+490.55	
+Gold
+16
+JP
+Takahiro Masuda	
+470.45	
+Gold
+17
+LV
+Aleksejs Zajakins	
+469	
+Gold
+18
+US
+Alexander Wei	
+466.42	
+Gold
+19
+US
+Daniel Chiu	
+466.42	
+Gold
+20
+PL
+Jaroslaw Kwiecien	
+461	
+Gold
+21
+TW
+Po-Chang Chen	
+453.42	
+Gold
+22
+TW
+Po-Jui Chen	
+453.42	
+Gold
+23
+RO
+Rare? Darius Buhai	
+453.42	
+Gold
+24
+VN
+Hanh Van Pham	
+451.02	
+Gold
+25
+KR
+Hanpil Kang	
+443.7	
+Gold
+26
+SK
+Eduard Batmendijn	
+440.45	
+Gold
+27
+JP
+Takuya Inoue	
+440.42	
+Gold
+28
+IN
+Malvika Raj Joshi	
+437.55	
+Silver
+29
+HU
+Marton Erdos	
+437.55	
+Silver
+30
+HK
+Ngan Hang Ho	
+431.42	
+Silver
+31
+BY
+Nikita Sazanovich	
+431.42	
+Silver
+32
+RS
+Dimitrije Erdeljan	
+423	
+Silver
+33
+KZ
+Bekzhan Bekbolatuly	
+415.55	
+Silver
+34
+FI
+Kalle Luopajarvi	
+415.42	
+Silver
+35
+KZ
+Meirambek Omyrzak	
+414.9	
+Silver
+36
+BG
+Encho Mishinev	
+414.45	
+Silver
+37
+SG
+Jacob Por Loong Teo	
+411.72	
+Silver
+38
+TR
+Muhammed Ikbal Kazar	
+410.5	
+Silver
+39
+GB
+Joseph Benton	
+405.42	
+Silver
+40
+TR
+Kayacan Vesek	
+404.11	
+Silver
+41
+KZ
+Nazarbek Altybay	
+402.55	
+Silver
+42
+VN
+Minh Phan Duc Nhat	
+402.42	
+Silver
+43
+TH
+Theemathas Chirananthavat	
+401.45	
+Silver
+44
+PL
+Konrad Paluszek	
+397	
+Silver
+45
+HR
+Ivan Lazaric	
+393.02	
+Silver
+46
+KR
+Jaehyun Koo	
+389.55	
+Silver
+47
+HK
+Kam Chuen Tung	
+389.42	
+Silver
+48
+RS
+Marko Stankovic	
+388.45	
+Silver
+49
+US
+Demi Guo	
+381.45	
+Silver
+50
+HR
+Tonko Sabolcec	
+381.45	
+Silver
+51
+NO
+Johan Sokrates Wind	
+380.45	
+Silver
+52
+LT
+Domantas Jadenkus	
+379	
+Silver
+53
+AU
+Michael Chen	
+378.45	
+Silver
+54
+BG
+Daniel Atanasov	
+373.91	
+Silver
+55
+RO
+Alexandru Velea	
+368.91	
+Silver
+56
+SE
+Joakim Blikstad	
+368.45	
+Silver
+57
+PL
+Maciej Holubowicz	
+367.91	
+Silver
+58
+PL
+Przemyslaw Kozlowski	
+366.42	
+Silver
+59
+HR
+Domagoj Bradac	
+364.45	
+Silver
+60
+TH
+Phoomraphee Luenam	
+363.55	
+Silver
+61
+VN
+Dung Viet Nguyen	
+363.45	
+Silver
+62
+CA
+Yikuan Li	
+363.45	
+Silver
+63
+IR
+Amir Keivan Mohtashami	
+363.02	
+Silver
+64
+HK
+Wai Pan Yik	
+356.42	
+Silver
+65
+TH
+Nonthakit Chaiwong	
+355.55	
+Silver
+66
+CN
+Yanyi Liu	
+351.59	
+Silver
+67
+TR
+Abdullah Enes Oncu	
+350.55	
+Silver
+68
+TH
+Phirasit Charoenchitseriwong	
+346.45	
+Silver
+69
+BY
+Barbara Kuskova	
+344.07	
+Silver
+70
+RS
+Dusan Zivanovic	
+341.72	
+Silver
+71
+ID
+Michael Wibawa	
+341.42	
+Silver
+72
+TW
+Hung-Hsun Yu	
+339.55	
+Silver
+73
+IT
+Filippo Gianni Baroni	
+339.42	
+Silver
+74
+VN
+Tien Trung Kien Nguyen	
+336.45	
+Silver
+75
+RU
+Nikolai Budin	
+335.78	
+Silver
+76
+ID
+Agus Sentosa Hermawan	
+334.45	
+Silver
+77
+RO
+Valentin-Marius Har?an	
+334.45	
+Silver
+78
+EG
+Yousef Ibrahim Salama	
+334	
+Silver
+79
+SK
+Bui Truc Lam	
+332.57	
+Silver
+80
+UA
+Matvii Aslandukov	
+325.72	
+Silver
+81
+UA
+Mark Mikhno	
+325.55	
+Silver
+82
+UA
+Roman Kachur	
+325.55	
+Silver
+83
+KZ
+Daniyar Maminov	
+323.55	
+Bronze
+84
+SG
+Jiahai Feng	
+323.42	
+Bronze
+85
+SG
+Choong Yin Howe	
+320	
+Bronze
+86
+IR
+Peyman Jabbarzade Ganje	
+320	
+Bronze
+87
+IT
+Marco Donadoni	
+315.45	
+Bronze
+88
+JP
+Akio Matsuzaki	
+314.55	
+Bronze
+89
+DE
+Anan Schutt	
+314.45	
+Bronze
+90
+AM
+Albert Gevorgyan	
+314.24	
+Bronze
+91
+BE
+Damien Galant	
+311.25	
+Bronze
+92
+AU
+Jerry Mao	
+310.55	
+Bronze
+93
+AU
+Declan McDonnell	
+310.53	
+Bronze
+94
+SG
+Wen Yuen Pang	
+310.45	
+Bronze
+95
+RO
+Andrei Popa	
+300.45	
+Bronze
+96
+ZA
+Ulrik De Muelenaere	
+297.55	
+Bronze
+97
+UA
+Ilya Shevchenko	
+297.11	
+Bronze
+98
+AT
+Gary Ye	
+296.42	
+Bronze
+99
+FI
+Sami Kalliomaki	
+289.42	
+Bronze
+100
+GE
+Georgy Skhirtladze	
+288.05	
+Bronze
+101
+FI
+Tuukka Korhonen	
+287.18	
+Bronze
+102
+DE
+Felix Bauckholt	
+283.55	
+Bronze
+103
+BY
+Ilya Medyanikov	
+282.73	
+Bronze
+104
+DE
+Julian Dorfler	
+279.07	
+Bronze
+105
+IT
+Francesco Milizia	
+276.45	
+Bronze
+106
+LU
+Gilles Englebert	
+275.55	
+Bronze
+107
+CH
+Daniel Peter Rutschmann	
+275.42	
+Bronze
+108
+GE
+Alexander Tskhovrebov	
+274.45	
+Bronze
+109
+GR
+Aristofanis Rontogiannis	
+270.55	
+Bronze
+110
+TM
+Bayram Berdiyev	
+270.55	
+Bronze
+111
+MD
+Mihail Tarigradschi	
+270	
+Bronze
+112
+ID
+Muhammad Ayaz Dzulfikar	
+269.45	
+Bronze
+113
+AT
+Peter Ralbovsky	
+269.45	
+Bronze
+114
+NO
+Michal Sladecek	
+268.45	
+Bronze
+115
+LV
+Aleksejs Popovs	
+266.55	
+Bronze
+116
+IL
+Liran Markin	
+265.45	
+Bronze
+117
+SK
+Pavel Madaj	
+260.55	
+Bronze
+118
+IN
+Tanay Nilesh Kothari	
+260.55	
+Bronze
+119
+HR
+Mihael Liskij	
+256.45	
+Bronze
+120
+NZ
+Jonathan Khoo	
+256.42	
+Bronze
+121
+RS
+Nikola Jovanovic	
+256.42	
+Bronze
+122
+EE
+Andres Unt	
+253.45	
+Bronze
+123
+SE
+David Warn	
+251.42	
+Bronze
+124
+BR
+Lucca Morais de Arruda Siaudzionis	
+251.13	
+Bronze
+125
+TJ
+Mekhrubon Turaev	
+250.13	
+Bronze
+126
+MY
+Justin Lim Kai Ze	
+248.45	
+Bronze
+127
+CA
+Yi Xiao Zhang	
+247.55	
+Bronze
+128
+IL
+Aviel Boag	
+245.72	
+Bronze
+129
+CZ
+Filip Bialas	
+245.55	
+Bronze
+130
+TW
+Yi Chou	
+245.55	
+Bronze
+131
+IN
+Kushagra Juneja	
+242.55	
+Bronze
+132
+BY
+Aliaksei Vistiazh	
+240.45	
+Bronze
+133
+FI
+Henrik Lievonen	
+239	
+Bronze
+134
+NZ
+Christopher Brown	
+238.42	
+Bronze
+135
+BR
+Arthur Pratti Dadalto	
+238	
+Bronze
+136
+LV
+Kristaps Civkulis	
+235.45	
+Bronze
+137
+MD
+Marcel Bezdrighin	
+235.45	
+Bronze
+138
+GE
+Elene Machaidze	
+234.45	
+Bronze
+139
+FR
+Thomas Sepulchre	
+234.42	
+Bronze
+140
+NL
+Ludo Pulles	
+233.45	
+Bronze
+141
+CA
+Farbod Yadegarian	
+229.55	
+Bronze
+142
+CZ
+Vaclav Rozhon	
+226.45	
+Bronze
+143
+TR
+Muhammed Emin Ayar	
+225.55	
+Bronze
+144
+AM
+Mushegh Shahinyan	
+217.13	
+Bronze
+145
+SY
+Aleksandar Abas	
+216.53	
+Bronze
+146
+AM
+Eduard Grigoryan	
+211	
+Bronze
+147
+ZA
+Robin Visser	
+210.42	
+Bronze
+148
+GE
+Giorgi Kldiashvili	
+208.42	
+Bronze
+149
+ZA
+Thomas Orton	
+207.45	
+Bronze
+150
+HU
+Tamas Bence Schwarcz	
+203	
+Bronze
+151
+PH
+Robin Christopher Yu	
+199.55	
+Bronze
+152
+IN
+Arjun Pitchanathan	
+196.42	
+Bronze
+153
+CY
+Angelos Pelecanos	
+195.45	
+Bronze
+154
+ZA
+Mohammed Yaseen Mowzer	
+194.55	
+Bronze
+155
+CH
+Fabian Lyck	
+192.45	
+Bronze
+156
+MO
+Hou Tin Chau	
+192.42	
+Bronze
+157
+TM
+Silap Aliyev	
+190	
+Bronze
+158
+IL
+Jonathan Gal	
+188.51	
+Bronze
+159
+LT
+Andrius Ovsianas	
+187.55	
+Bronze
+160
+EE
+Toomas Tennisberg	
+187.45	
+Bronze
+161
+FR
+Arthur Leonard	
+185.45	
+Bronze
+162
+BR
+Mateus Bezrutchka	
+185.11	
+None
+164
+MX
+Juan Carlos Sigler Priego	
+183.93	
+None
+165
+SE
+Fredrik Hernqvist	
+182.46	
+None
+166
+BD
+Labib Md. Rashid	
+182.46	
+None
+167
+PT
+Goncalo Paredes	
+182.45	
+None
+168
+HU
+Almos Zarandy	
+177.86	
+None
+169
+ES
+Joan Massachs Guell	
+174.42	
+None
+170
+HU
+Ambrus Weisz	
+172.42	
+None
+171
+ES
+Cesc Folch Aldehuelo	
+170	
+None
+172
+MK
+Kliment Serafimov	
+168	
+None
+173
+GR
+Konstantinos Agiannis	
+165.45	
+None
+174
+BR
+Murilo Corato Zanarella	
+165	
+None
+175
+CZ
+Matej Konecny	
+162	
+None
+176
+GR
+Panagiotis Kostopanagiotis	
+160.46	
+None
+177
+HK
+Tsz Fung Yu	
+158.55	
+None
+178
+CU
+Alexander Bestard Rivera	
+156.45	
+None
+179
+BG
+Kristiyan Tsaklev	
+156	
+None
+180
+ME
+Dejan Todorovic	
+155.45	
+None
+181
+KG
+Kadyrbek Narmamatov	
+155.33	
+None
+182
+TJ
+Nodir Daminov	
+154	
+None
+183
+BD
+Nur Muhammad Shafiullah	
+153.79	
+None
+184
+LT
+Ignas Kancleris	
+153.45	
+None
+185
+MK
+Boris Tanchovski	
+153.02	
+None
+186
+GB
+Rowan Lee	
+152.42	
+None
+187
+CL
+Javier Oliva	
+150.42	
+None
+188
+AR
+Roman Castellarin	
+149.33	
+None
+189
+BA
+Jan Ahmetspahic	
+147	
+None
+190
+NZ
+Byung Hoon Cho	
+145.46	
+None
+191
+ME
+Velibor Dosljak	
+143.13	
+None
+192
+TJ
+Doro Umarov	
+141.55	
+None
+193
+SY
+M. Besher Massri	
+141.49	
+None
+194
+SY
+Joud Zouzou	
+141.33	
+None
+195
+ES
+Miquel Ortega Sanchez Colomer	
+141	
+None
+196
+CH
+Timon Stampfli	
+140.4	
+None
+197
+MX
+Angel David Ortega Ramirez	
+139.45	
+None
+198
+MK
+Dimitar Bajraktarov	
+137	
+None
+199
+FR
+Arnaud Robin	
+136.45	
+None
+200
+SK
+Samuel Sladek	
+136.45	
+None
+201
+MY
+Jia Jen Ng	
+135.45	
+None
+202
+DE
+Philip Wellnitz	
+133.55	
+None
+203
+TM
+Allanur Shiriyev	
+133.45	
+None
+204
+BE
+Nico Ekkart	
+133.45	
+None
+205
+CZ
+Dalimil Hajek	
+132.45	
+None
+206
+FR
+Theophane Vallaeys	
+132.45	
+None
+207
+EE
+Simmo Saan	
+132.29	
+None
+208
+MX
+Emmanuel Antonio Cuevas	
+128.55	
+None
+209
+GR
+Emmanuil Michalainas	
+124	
+None
+210
+KG
+Azret Kenzhaliev	
+121.33	
+None
+211
+GB
+Zhenxian Yang	
+121.33	
+None
+212
+NL
+Johannes Heuseveldt	
+119.77	
+None
+213
+MX
+Carlos Galeana Hernandez	
+118.55	
+None
+214
+TN
+Ahmed Bouhoula	
+118.45	
+None
+215
+GB
+David Shah	
+118.45	
+None
+216
+DK
+Sebastian Blunt	
+118.45	
+None
+217
+ID
+Stacia Edina Johanna	
+118.45	
+None
+218
+NZ
+Philip Anderson	
+118	
+None
+219
+AT
+Florian Leimgruber	
+117.45	
+None
+220
+LV
+Ingus Janis Pretkalnins	
+117	
+None
+221
+EE
+Oliver Nisumaa	
+117	
+None
+222
+BE
+Matteo Couplet	
+115.41	
+None
+223
+LT
+Emilijus Stankus	
+113.07	
+None
+224
+MY
+Jen Khai Yew	
+111.46	
+None
+225
+ES
+Jordi Castellvi Foguet	
+111.46	
+None
+226
+AZ
+Elgun Jabrayilzade	
+111.27	
+None
+227
+PH
+Ian Vincent Palabasan	
+109.45	
+None
+228
+MN
+Akjarkyn Tumurkhan	
+108.45	
+None
+229
+UZ
+Andrey Li	
+108.45	
+None
+230
+MN
+Battulga Enkhbayar	
+108.45	
+None
+231
+CO
+Juan Bedoya	
+108.45	
+None
+232
+DK
+Carl Dybdahl	
+108.42	
+None
+233
+CH
+Pascal Sommer	
+105.82	
+None
+234
+TN
+Mohamed Moakhar	
+102.45	
+None
+235
+BD
+Hasib Al Muhaimin	
+102	
+None
+236
+LU
+Nicolas Jacques Brauch	
+99.31	
+None
+237
+TJ
+Bakhoduri Sukhayli	
+97	
+None
+238
+SI
+Bor Brecelj	
+95.46	
+None
+239
+TN
+Mohamed Fadhel Omar	
+95	
+None
+240
+KG
+Erkin Matkaziev	
+93.68	
+None
+241
+DK
+Markus Krabbe Larsen	
+92.74	
+None
+242
+CL
+Nicolas Mosnaim	
+92.57	
+None
+243
+DO
+Michael Jose Gonzales Bardales	
+92.45	
+None
+244
+IE
+Teofil Camarasu	
+92.45	
+None
+245
+LK
+Roshnal Lihinikadu	
+91.51	
+None
+246
+SE
+Karl Lundstig	
+91	
+None
+247
+MD
+Mihail Chihai	
+91	
+None
+248
+JO
+Mohammad Abuaboud	
+91	
+None
+249
+AM
+Martin Mirakyan	
+90.23	
+None
+250
+BD
+Imran Hasan	
+90	
+None
+251
+IT
+Dario Ostuni	
+87	
+None
+252
+NL
+Tom Jacob Smeding	
+86.06	
+None
+253
+BA
+Fahrudin Halilovic	
+85.41	
+None
+254
+MO
+Pui Chun Ng	
+82.46	
+None
+255
+AR
+Maximiliano Redigonda	
+82.43	
+None
+256
+AT
+Simon Lehner-Dittenberger	
+82.41	
+None
+257
+CO
+Andres Perez	
+81.45	
+None
+258
+LK
+Pasindu Wijesena	
+80	
+None
+259
+BE
+Robin Jadoul	
+79.56	
+None
+260
+CO
+Juan Chaves	
+79.33	
+None
+261
+BO
+Miguel Angel Ortiz Merida	
+77.4	
+None
+262
+NO
+Havard Terland	
+77	
+None
+263
+PH
+Aldrich Ellis Asuncion	
+74.92	
+None
+264
+DK
+Oscar Peulicke	
+74	
+None
+265
+TN
+Adem Khachnaoui	
+73	
+None
+266
+MN
+Batjargal Altangerel	
+73	
+None
+267
+PT
+Fabio Colaco	
+73	
+None
+268
+PT
+Jose Correia	
+73	
+None
+269
+EG
+Nouran AbdElAziz	
+73	
+None
+270
+SI
+Tim Postuvan	
+73	
+None
+271
+NO
+Valentin Plotkin	
+73	
+None
+272
+SY
+Mohamad Dwik	
+71	
+None
+273
+LU
+Jo Pletsch	
+69.84	
+None
+274
+BA
+Elvir Crncevic	
+68.46	
+None
+275
+LU
+Sami Bosch	
+68.15	
+None
+276
+EG
+Ahmed Morsy	
+63	
+None
+277
+CL
+Benjamin Aguilar	
+63	
+None
+278
+BO
+Diego Alejandro Angulo Ramirez	
+63	
+None
+279
+LK
+Mudith Witharamalage	
+63	
+None
+280
+MD
+Valeriu Motroi	
+62	
+None
+281
+KG
+Zarlyk Zhusubaliev	
+58	
+None
+282
+JO
+Jood Hajeer	
+57	
+None
+283
+MO
+Si Weng Lam	
+57	
+None
+284
+MN
+Bat-Orshikh Gombojav	
+56	
+None
+285
+SI
+Martin Peterlin	
+56	
+None
+286
+CY
+Evripidis Papaevripidis	
+55	
+None
+287
+AR
+Gianni Weinand	
+53	
+None
+288
+AZ
+Rustam Aghayev	
+53	
+None
+289
+IE
+Aron Hoffmann	
+53	
+None
+290
+MK
+Hristijan Gjorshevski	
+47	
+None
+291
+BO
+Marcelo Alejandro Zeballos Guzman	
+47	
+None
+292
+PH
+Matthew Ryan Tan	
+47	
+None
+293
+LK
+Nisal Periyapperuma	
+47	
+None
+294
+DO
+Alejandra Martinez Jimenez	
+46	
+None
+295
+MO
+Kam Fai Chan	
+46	
+None
+296
+TM
+Berdimyrat Cholukov	
+40	
+None
+297
+CY
+Giorgos Gavriil	
+40	
+None
+298
+MY
+Kai Hsien Boo	
+40	
+None
+299
+AR
+Ariel Nowik	
+37	
+None
+300
+IE
+Daniel Mulcahy	
+37	
+None
+301
+PT
+Joao Lago	
+37	
+None
+302
+CL
+Leandro Cerna	
+37	
+None
+303
+NL
+Max Meijer	
+37	
+None
+304
+VE
+Satoru Diaz Nakada	
+37	
+None
+305
+VE
+David Kaller	
+35.63	
+None
+306
+JO
+Sami Daoud	
+35	
+None
+307
+UZ
+Raif Akhmedshin	
+30	
+None
+308
+CO
+Roger Trujillo	
+30	
+None
+309
+CY
+Adamos Ttofari	
+27	
+None
+310
+IE
+Noah Donnelly	
+25	
+None
+311
+DO
+Manuel David Sanchez Suero	
+20	
+None
+312
+JO
+Mohammad Abuejheisheh	
+20	
+None
+313
+VE
+David Bou	
+17	
+None
+314
+BO
+Ronaldo Franco Jaldin	
+17	
+None
+315
+AZ
+Kamal Eyubov	
+10	
+None
+316
+AZ
+Sharif Afandi	
+10	
+None
+317
+NG
+Chibuoyim Faith Wilson Ogbonna	
+0	
+None
+318
+VE
+Christian Lopez	
+0	
+None
+319
+NG
+Emmanuel Oriolowo Niyi	
+0	
+None
+320
+NG
+Fodunbosade Abisodun Ologunde	
+0	
+None
+321
+NG
+Victoria Tamuno-Miebaka Okumgba	
+0	
+None
+322
+SI
+Ziga Zeljko	
+0
+None

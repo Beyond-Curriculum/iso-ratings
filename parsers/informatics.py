@@ -7,6 +7,7 @@ class YearResults:
         self.isRoundsPresent = isRoundsPresent
 
     def parse(self, file):
+<<<<<<< HEAD
         file = open(file, 'r').readlines()
         arifcount = len(file)
         for it in range(0, arifcount, 5):
@@ -20,6 +21,22 @@ class YearResults:
         	student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
         	self.countryToStud[country].append(student)
         	self.placeToStud[place] = student
+=======
+        print(file)
+        file = open(file, 'r').readlines()
+        arifcount = len(file)
+        for it in range(0, arifcount, 5):
+            place = file[it]
+            country = file[it + 1]
+            name = file[it + 2]
+            score = float(file[it + 3])
+            medal = file[it + 4]
+            if country not in self.countryToStud:
+                self.countryToStud[country] = []
+            student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
+            self.countryToStud[country].append(student)
+            self.placeToStud[place] = student
+>>>>>>> f1ef3cfa0dbfa5128abda5bb44649e2cd77588e5
     
     def build_rating_based_on_score(self):
         countryToScore = {}
@@ -62,7 +79,11 @@ def export_ratings_based_on_score(countries):
         year, prebool = year_and_bool.split('|')
         if prebool == 'T': actbool = True
         else: actbool = False
+<<<<<<< HEAD
         yr = YearResults(BASE + f'{year}.out', 1)
+=======
+        yr = YearResults(BASE + f'{year}.txt', 1)
+>>>>>>> f1ef3cfa0dbfa5128abda5bb44649e2cd77588e5
         placeToCountry, countryToPlace = yr.main()
         yearToPlace[year] = {}
         for country in countries:
@@ -72,5 +93,9 @@ def export_ratings_based_on_score(countries):
     return yearToPlace
 
 
+<<<<<<< HEAD
 #o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
+=======
+o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
+>>>>>>> f1ef3cfa0dbfa5128abda5bb44649e2cd77588e5
 #print(o)
