@@ -63,30 +63,20 @@ class YearResults:
         for country, students in self.countryToStud.items():
             countryToScore[country] = sum([student['score'] for student in students])
         
-        scores = list(countryToScore.values())
+        scores = list(set(countryToScore.values()))
         scores.sort(reverse=True)
         
         placeToCountry, countryToPlace = {}, {}
         for i, score in enumerate(scores):
             for country, val in countryToScore.items():
                 if score == val:
-                    break
-            # print(f'#{i+1}. {country}. {val}')
-            placeToCountry[i+1] = country
-            countryToPlace[country] = i+1
+                    if i+1 not in placeToCountry:
+                        placeToCountry[i+1] = []
+                    placeToCountry[i+1].append(country)
+                    countryToPlace[country] = i+1
         return placeToCountry, countryToPlace
         
     def main(self):
-        # self.parse_html('data/2021.html')
-        # self.parse_html('data/2020.html')
-        # self.parse_html('data/2019.html')
-        # self.parse_html_rounds('data/2018.html')
-        # self.parse_html_rounds('data/2017.html')
-        # self.parse_html_rounds('data/2016.html')
-        # self.parse_html('data/2015.html')
-        # self.parse_html_rounds('data/2014.html')
-        # self.parse_html_rounds('data/2013.html')
-        # self.parse_html_rounds('data/2010.html')
         if self.isRoundsPresent:
             self.parse_html_rounds(self.path)
         else:
