@@ -1,3 +1,4 @@
+1730
 1
 US
 William Lin	
@@ -877,854 +878,854 @@ None
 AT
 Daniel Fendrich	
 231.71	
-Ничего
+None
 178
 SY
 Ahmad Haidar	
 231	
-Ничего
+None
 179
 BR
 Willian Wang	
 230.32	
-Ничего
+None
 180
 KZ
-Жамбыл Максотов 
+Zhambyl Maxotov 
 230.32	
-Ничего
+None
 181
 DK
 William Bille Meyling	
 227.87	
-Ничего
+None
 182
 HK
 Hei Chit Cheng	
 227.32	
-Ничего
+None
 183
 BY
 Andrei Daletski	
 225.32	
-Ничего
+None
 184
 CY
 Demetris Chrysostomou	
 225.32	
-Ничего
+None
 185
 BG
 Stoyan Malinin	
 224.96	
-Ничего
+None
 186
 DE
 Bumjun Kim	
 224.18	
-Ничего
+None
 187
 SI
 Jakob Schrader	
 221.71	
-Ничего
+None
 188
 DK
 Christian Bertram	
 221.43	
-Ничего
+None
 189
 SA
 Fares Basuni	
 220.36	
-Ничего
+None
 190
 KZ
 Timur Ratnikov	
 219.93	
-Ничего
+None
 191
 NO
 Andreas Alberg	
 219.32	
-Ничего
+None
 192
 ES
 Victor Conchello Vendrell	
 217	
-Ничего
+None
 193
 ZA
 Bernardus Wessels	
 214.32	
-Ничего
+None
 194
 EE
 Jaagup Tamme	
 214.14	
-Ничего
+None
 195
 NL
 Marijn Adriaanse	
 212.43	
-Ничего
+None
 196
 EE
 Marko Tsengov	
 211.93	
-Ничего
+None
 197
 KZ
 Parassat Kyzyrkanov	
 210.46	
-Ничего
+None
 198
 NL
 Thomas Bosch	
 209.71	
-Ничего
+None
 199
 PT
 Rui Wang	
 208.93	
-Ничего
+None
 200
 CL
 Ignacio Munoz	
 208.46	
-Ничего
+None
 201
 RS
 Mladen Puzic	
 208	
-Ничего
+None
 202
 IE
 Suneet Mahajan	
 206.32	
-Ничего
+None
 203
 SK
 Matej Hanus	
 205.78	
-Ничего
+None
 204
 LV
 Jegors Balzins	
 205.36	
-Ничего
+None
 205
 TR
 Ahmet Atilla Ak	
 204	
-Ничего
+None
 206
 CO
 Oscar Sierra	
 203.32	
-Ничего
+None
 207
 IL
 Inbar Wald	
 202.32	
-Ничего
+None
 208
 SG
 Adriel Tan Jean Ren	
 200	
-Ничего
+None
 209
 KG
 Islam Davletov	
 197.71	
-Ничего
+None
 210
 NL
 Jeroen op de Beek	
 197.14	
-Ничего
+None
 211
 KG
 Artur Aidarov	
 196.86	
-Ничего
+None
 212
 SY
 Mohammad Nour Massri	
 196.37	
-Ничего
+None
 213
 DK
 Markus Mathiasen	
 196.14	
-Ничего
+None
 214
 NZ
 Maayan Levy	
 195.86	
-Ничего
+None
 215
 TR
 Furkan Cebe	
 193	
-Ничего
+None
 216
 BD
 Mamnoon Siam	
 192.55	
-Ничего
+None
 217
 PH
 Steven Reyes	
 191.32	
-Ничего
+None
 218
 KG
 Shabdan Batyrkulov	
 190	
-Ничего
+None
 219
 AR
 Sebastian Mestre	
 189	
-Ничего
+None
 220
 BR
 Igor Brito Andrade	
 188	
-Ничего
+None
 221
 MY
 Kenneth Yong	
 186.93	
-Ничего
+None
 222
 LT
 Modestas Gujis	
 186.32	
-Ничего
+None
 223
 MO
 Cheng U Ian	
 185	
-Ничего
+None
 224
 FR
 Justin Cahuzac	
 184	
-Ничего
+None
 225
 JO
 Wesam Naseer	
 183.32	
-Ничего
+None
 226
 ES
 Blanca Huergo Munoz	
 179.32	
-Ничего
+None
 227
 SK
 Lucia Krajcoviechova	
 179	
-Ничего
+None
 228
 SY
 Philip Aji	
 178	
-Ничего
+None
 229
 SE
 Loke Gustafsson	
 177.64	
-Ничего
+None
 230
 CU
 Leonardo Daniel Artiles Montero	
 175	
-Ничего
+None
 231
 NO
 Magnus Hegdahl	
 175	
-Ничего
+None
 232
 FI
 Henrik Aalto	
 174	
-Ничего
+None
 233
 SI
 Lan Sevcnikar	
 173.31	
-Ничего
+None
 234
 SI
 Domen Hocevar	
 173.3	
-Ничего
+None
 235
 IT
 Filippo Casarin	
 173	
-Ничего
+None
 236
 CH
 Lukas Munzel	
 172.93	
-Ничего
+None
 237
 FR
 Gregoire Le Corre	
 169.68	
-Ничего
+None
 238
 BE
 Zhiyi Luo	
 168.32	
-Ничего
+None
 239
 MO
 Tong Sam Zheng	
 167	
-Ничего
+None
 240
 CY
 Christos Falas	
 165	
-Ничего
+None
 241
 MK
 Teo Kitanovski	
 162.93	
-Ничего
+None
 242
 AZ
 Ibrahim Taghizade	
 160	
-Ничего
+None
 243
 EE
 Oliver Tennisberg	
 158	
-Ничего
+None
 244
 KG
 Omurbek Dzhamalov	
 154	
-Ничего
+None
 245
 LK
 Lakshith Nishshanke	
 150	
-Ничего
+None
 246
 ZA
 Mohammed Taariq Mowzer	
 150	
-Ничего
+None
 247
 MA
 Nabil Boudra	
 145.78	
-Ничего
+None
 248
 NO
 Christoffer Tryggestad	
 145.62	
-Ничего
+None
 249
 NZ
 Joseph Grace	
 144	
-Ничего
+None
 250
 TN
 Hedi Ben Daoud	
 142.32	
-Ничего
+None
 251
 CU
 Alberto Leyva Guerra	
 141	
-Ничего
+None
 252
 TN
 Mohamed Nguira	
 140.43	
-Ничего
+None
 253
 IT
 Valerio Stancanelli	
 139.32	
-Ничего
+None
 254
 SA
 Mohammed Alrefaei	
 137.64	
-Ничего
+None
 255
 MY
 Amos Li Sheng Tan	
 137	
-Ничего
+None
 256
 SV
 Jose Rodrigo Santamaria	
 135	
-Ничего
+None
 257
 CH
 Jonas Meier	
 132	
-Ничего
+None
 258
 CZ
 Karel Chwistek	
 132	
-Ничего
+None
 259
 IE
 Oisin Davey	
 132	
-Ничего
+None
 260
 AT
 Sebastian Schulze	
 132	
-Ничего
+None
 261
 TJ
 Muhammadjon Hokimiyon	
 131.71	
-Ничего
+None
 262
 TM
 Gurbanberdi Gulladyyev	
 131	
-Ничего
+None
 263
 CO
 Alvaro Bacca	
 130	
-Ничего
+None
 264
 SY
 Beshr Islam Bouli	
 124	
-Ничего
+None
 265
 SE
 Niklas Sanden	
 124	
-Ничего
+None
 266
 AR
 Joaquin Cruz	
 123.32	
-Ничего
+None
 267
 PS
 Mohammad Milhem	
 120.64	
-Ничего
+None
 268
 CL
 Vicente Opazo	
 117	
-Ничего
+None
 269
 MA
 Aymane Moutei	
 114.24	
-Ничего
+None
 270
 CY
 Konstantinos Tziapouras	
 112.64	
-Ничего
+None
 271
 BO
 Nicolas Mateo Valdivia Viscarra	
 112.64	
-Ничего
+None
 272
 MN
 Badrangiikh Bat-Orgil	
 110.64	
-Ничего
+None
 273
 SV
 Cesar Esau Flores Martinez	
 110	
-Ничего
+None
 274
 IS
 Giovanni Gaio	
 109	
-Ничего
+None
 275
 PH
 Steven Chua	
 108	
-Ничего
+None
 276
 MX
 Gabriel Ricardo Rodriguez Castillo	
 106	
-Ничего
+None
 277
 PS
 Basil Hijaz	
 105	
-Ничего
+None
 278
 TN
 Elyes Chaabouni	
 105	
-Ничего
+None
 279
 NO
 Mathias Presthagen	
 105	
-Ничего
+None
 280
 PT
 Ricardo Antunes	
 105	
-Ничего
+None
 281
 LK
 Sithija Abhishek Kotuwewatta	
 99.32	
-Ничего
+None
 282
 ME
 Filip Dosljak	
 98.78	
-Ничего
+None
 283
 NZ
 Zhiyuan Qi	
 98	
-Ничего
+None
 284
 TN
 Omar Besbes	
 96.95	
-Ничего
+None
 285
 AR
 Ariel Fideleff	
 96.64	
-Ничего
+None
 286
 MO
 Hoi Wan Li	
 96.64	
-Ничего
+None
 287
 MY
 Hau Ye Heng	
 96	
-Ничего
+None
 288
 LU
 Jarod Differdange	
 91	
-Ничего
+None
 289
 BO
 Daner Zein Tonconi Mendoza	
 89	
-Ничего
+None
 290
 SA
 Mohammed Alsaad	
 88.64	
-Ничего
+None
 291
 PT
 Duarte Nobrega	
 86	
-Ничего
+None
 292
 BE
 Jerome Mayolet	
 85	
-Ничего
+None
 293
 DK
 Thor Eriksen	
 85	
-Ничего
+None
 294
 UZ
 Yan Yevzman	
 80	
-Ничего
+None
 295
 LK
 Thithiesha Mahabaduge	
 77.93	
-Ничего
+None
 296
 MX
 Alejandro Ozymandias Cepeda Beltran	
 76	
-Ничего
+None
 297
 TM
 Suleyman Atayev	
 76	
-Ничего
+None
 298
 MA
 Ayman Riad Solh	
 75	
-Ничего
+None
 299
 JO
 Mohammad Alwarawreh	
 75	
-Ничего
+None
 300
 UZ
 Azimjon Urinov	
 74	
-Ничего
+None
 301
 CL
 Luciano Massa	
 74	
-Ничего
+None
 302
 CO
 Juan Martinez	
 73	
-Ничего
+None
 303
 LU
 Rafael Dux	
 73	
-Ничего
+None
 304
 BE
 Petar Vitorac	
 71	
-Ничего
+None
 305
 BA
 Emira Ibrahimovic	
 70	
-Ничего
+None
 306
 BO
 Roger Danilo Enriquez Corrales	
 70	
-Ничего
+None
 307
 GR
 Athanasios Taprantzis	
 66	
-Ничего
+None
 308
 AR
 Luis Andres Aseguinolaza	
 66	
-Ничего
+None
 309
 DO
 Jair Rafael Santana Benzan	
 62	
-Ничего
+None
 310
 UZ
 Dilshodbek Khujaqulov	
 61	
-Ничего
+None
 311
 SV
 Jose Manuel Cabrera	
 61	
-Ничего
+None
 312
 AT
 Moritz Strobl	
 61	
-Ничего
+None
 313
 PS
 Roba Katout	
 61	
-Ничего
+None
 314
 MN
 Bilguudei Shinezul	
 58	
-Ничего
+None
 315
 MN
 Khangal Battur	
 56	
-Ничего
+None
 316
 SA
 Raya Abualjamal	
 55	
-Ничего
+None
 317
 SV
 Gabriela Lourdes Rodriguez Parada	
 50	
-Ничего
+None
 318
 PS
 Nicola Abusaad	
 49	
-Ничего
+None
 319
 NG
 Daniel Emeka-Ilozor	
 42	
-Ничего
+None
 320
 TJ
 Toirov Sadi	
 42	
-Ничего
+None
 321
 MO
 Chun Ioi Chan	
 41	
-Ничего
+None
 322
 VE
 Francisco Javier Molina Tirado	
 39	
-Ничего
+None
 323
 LK
 Chirath Nirodha	
 36	
-Ничего
+None
 324
 BA
 Alen Hodzic	
 32	
-Ничего
+None
 325
 DO
 Dionicio Sebastian Elias	
 32	
-Ничего
+None
 326
 VE
 Elliot Jose Larez Inaudi	
 32	
-Ничего
+None
 327
 LU
 Alexandre Fouquet	
 31	
-Ничего
+None
 328
 TM
 Dovran Akmyradov	
 31	
-Ничего
+None
 329
 CL
 Jorge Bravo	
 31	
-Ничего
+None
 330
 IE
 Adam Kelly	
 30	
-Ничего
+None
 331
 IE
 Harvey Brezina Conniffe	
 30	
-Ничего
+None
 332
 LU
 Raffael Marth	
 24	
-Ничего
+None
 333
 VE
 Gabriel Alejandro Mendez Junor	
 22	
-Ничего
+None
 334
 DO
 Alejandro Jose Malla Martinez	
 21	
-Ничего
+None
 335
 BO
 Jose Alberto Copas Lima	
 21	
-Ничего
+None
 336
 TM
 Muhammetali Ashyrmuhammedov	
 21	
-Ничего
+None
 337
 IS
 Samuel Arnar Hafsteinsson	
 21	
-Ничего
+None
 338
 TJ
 Shakhrom Aminov	
 21	
-Ничего
+None
 339
 ME
 Matija Delic	
 19	
-Ничего
+None
 340
 NG
 Adegoke Salako	
 11	
-Ничего
+None
 341
 GR
 Panagiotis Chatzimichos	
 11	
-Ничего
+None
 342
 CO
 Juan Rios	
 10	
-Ничего
+None
 343
 UZ
 Maqsud Baxriddinov	
 10	
-Ничего
+None
 344
 JO
 Noor Al-Bzour	
 10	
-Ничего
+None
 345
 IS
 Elvar Arni Bjarnason	
 0	
-Ничего
+None
 346
 NG
 Godson Ajodo	
 0	
-Ничего
+None
 347
 VE
 Ana Paula De Sousa Martin	
 0
-Ничего
+None
