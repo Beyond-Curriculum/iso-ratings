@@ -97,7 +97,7 @@ def export_ratings_based_on_score(countries):
         year, prebool = year_and_bool.split('|')
         if prebool == 'T': actbool = True
         else: actbool = False
-        yr = YearResults(BASE + f'{year}.html', actbool)
+        yr = YearResults(BASE + f'{year}.txt', actbool)
         placeToCountry, countryToPlace = yr.main()
         yearToPlace[year] = {}
         for country in countries:
