@@ -1,21 +1,22 @@
+from numpy import place
+
+
 class YearResults:
 
-    def __init__(self, file, isRoundsPresent):
+    def __init__(self, file):
         self.placeToStud = {}
         self.countryToStud = {}
         self.path = file
-        self.isRoundsPresent = isRoundsPresent
 
     def parse(self, file):
-        print(file)
         file = open(file, 'r').readlines()
         arifcount = len(file)
-        for it in range(0, arifcount, 5):
-            place = file[it]
-            country = file[it + 1]
-            name = file[it + 2]
+        for it in range(1, arifcount, 5):
+            place = int(file[it].split('\n')[0])
+            country = file[it + 1].split('\n')[0]
+            name = file[it + 2].split('\t')[0]
             score = float(file[it + 3])
-            medal = file[it + 4]
+            medal = file[it + 4].split('\n')[0]
             if country not in self.countryToStud:
                 self.countryToStud[country] = []
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
@@ -25,8 +26,8 @@ class YearResults:
     def build_rating_based_on_score(self):
         countryToScore = {}
         for country, students in self.countryToStud.items():
-            countryToScore[country] = sum([student['score'] for student in students])
-        
+            countryToScore[country] = sum([student['score'] for student in students])/len(students)
+
         scores = list(countryToScore.values())
         scores.sort(reverse=True)
         
@@ -56,14 +57,10 @@ class YearResults:
 
 def export_ratings_based_on_score(countries):
     BASE = 'data/informatics/'
-    YEARS = '2021|T 2020|T 2019|T 2018|T 2017|T 2016|T 2015|T 2014|T 2013|T 2012|T 2011|T 2010|T'
-    # YEARS = '2018'
+    YEARS = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
     yearToPlace = {}
-    for year_and_bool in YEARS.split(' '):
-        year, prebool = year_and_bool.split('|')
-        if prebool == 'T': actbool = True
-        else: actbool = False
-        yr = YearResults(BASE + f'{year}.txt', 1)
+    for year in YEARS.split(' '):
+        yr = YearResults(BASE + f'{year}.txt')
         placeToCountry, countryToPlace = yr.main()
         yearToPlace[year] = {}
         for country in countries:

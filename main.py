@@ -8,7 +8,7 @@ class SubjectRating:
     def __init__(self, parser, subject):
         self.parser = parser.export_ratings_based_on_score
         self.subject = subject
-        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO'}
+        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO', 'informatics': 'IOI'}
 
     def _update_fig(self, figure, title, xAxis, yAxis):
         figure.update_layout(
@@ -96,11 +96,11 @@ class SubjectRating:
 
 
 
-chemObj = SubjectRating(parsers.chemistry, 'chemistry')
-chemObj.plot(('KZ', 'UZ', 'RU', 'total'))
+# chemObj = SubjectRating(parsers.chemistry, 'chemistry')
+# chemObj.plot(('KZ', 'UZ', 'RU', 'total'))
 
-mathObj = SubjectRating(parsers.mathematics, 'mathematics')
-mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
+# mathObj = SubjectRating(parsers.mathematics, 'mathematics')
+# mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
 
 csObj = SubjectRating(parsers.informatics, 'informatics')
 csObj.plot(('KZ', 'UZ', 'RU', 'total'))
