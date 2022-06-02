@@ -32,8 +32,10 @@ class YearResults:
     def parse_html_rounds(self, file):
         file = open(file, 'r',encoding="utf8").readlines()[0]
         rows = file.split('<tr>')
+        i = 0
         for row in rows:
             elts = row.split('<td>')
+            # print(elts)
             if len(elts) == 1: 
                 continue
             place = int(elts[1].split('</td>')[0])
@@ -54,6 +56,9 @@ class YearResults:
             if country not in self.countryToStud:
                 self.countryToStud[country] = []
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
+            # print(student)
+            # i += 1
+            # if i == 10: break
             self.countryToStud[country].append(student)
             self.placeToStud[place] = student
     
@@ -62,30 +67,21 @@ class YearResults:
         for country, students in self.countryToStud.items():
             countryToScore[country] = sum([student['score'] for student in students])
         
-        scores = list(countryToScore.values())
+        scores = list(set(countryToScore.values()))
         scores.sort(reverse=True)
         
         placeToCountry, countryToPlace = {}, {}
         for i, score in enumerate(scores):
             for country, val in countryToScore.items():
                 if score == val:
-                    break
-            # print(f'#{i+1}. {country}. {val}')
-            placeToCountry[i+1] = country
-            countryToPlace[country] = i+1
+                    if i+1 not in placeToCountry:
+                        placeToCountry[i+1] = []
+                    placeToCountry[i+1].append(country)
+                    countryToPlace[country] = i+1
+        # print(len(countryToPlace), len(list(placeToCountry.values())))
         return placeToCountry, countryToPlace
         
     def main(self):
-        # self.parse_html('data/2021.html')
-        # self.parse_html('data/2020.html')
-        # self.parse_html('data/2019.html')
-        # self.parse_html_rounds('data/2018.html')
-        # self.parse_html_rounds('data/2017.html')
-        # self.parse_html_rounds('data/2016.html')
-        # self.parse_html('data/2015.html')
-        # self.parse_html_rounds('data/2014.html')
-        # self.parse_html_rounds('data/2013.html')
-        # self.parse_html_rounds('data/2010.html')
         if self.isRoundsPresent:
             self.parse_html_rounds(self.path)
         else:
@@ -95,13 +91,13 @@ class YearResults:
 def export_ratings_based_on_score(countries):
     BASE = 'data/mathematics/'
     YEARS = '2021|T 2020|T 2019|T 2018|T 2017|T 2016|T 2015|T 2014|T 2013|T 2012|T 2011|T 2010|T'
-    # YEARS = '2018'
+    # YEARS = '2021|T'
     yearToPlace = {}
     for year_and_bool in YEARS.split(' '):
         year, prebool = year_and_bool.split('|')
         if prebool == 'T': actbool = True
         else: actbool = False
-        yr = YearResults(BASE + f'{year}.html', actbool)
+        yr = YearResults(BASE + f'{year}.txt', actbool)
         placeToCountry, countryToPlace = yr.main()
         yearToPlace[year] = {}
         for country in countries:
@@ -109,19 +105,6 @@ def export_ratings_based_on_score(countries):
                 yearToPlace[year][country] = countryToPlace[country]
         yearToPlace[year]['total'] = len(countryToPlace.keys())
     return yearToPlace
-
-# 2021 - 
-# 2020 - 
-# 2019 - 
-# 2018 - 
-# 2017 - 
-# 2016 - 
-# 2015 - 
-# 2014 - 
-# 2013 - 
-# 2012 - 
-# 2011 - 
-# 2010 - 
 
 # o = export_ratings_based_on_score(('KZ', 'HK', 'IN'))
 # print(o)

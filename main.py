@@ -2,13 +2,14 @@ import parsers.chemistry
 import parsers.mathematics
 import parsers.informatics
 import plotly.graph_objects as go
+import time
 
 class SubjectRating:
 
     def __init__(self, parser, subject):
         self.parser = parser.export_ratings_based_on_score
         self.subject = subject
-        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO'}
+        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO', 'informatics': 'IOI'}
 
     def _update_fig(self, figure, title, xAxis, yAxis):
         figure.update_layout(
@@ -72,9 +73,14 @@ class SubjectRating:
         return go.Scatter(x=xVals, y=yVals, mode='markers+lines+text', name=country, text=yVals, textposition="top center")
 
     def plot(self, countries):
+        # ---- тупой костыль (нужен чтобы на пдфках не было текста о непрогрузке mathjax)
+        ran_fig = go.Figure(data = go.Scatter(x=[0,1,2,3], y=[0,1,4,9]))
+        ran_fig.write_image('random.pdf')
+        time.sleep(2) 
+        # ---- конец тупого костыля
+
         yearToPlace = self.parser(countries)
         fig = go.Figure()
-
         traces = []
         for country in countries:
             xVals, yVals = [], []
@@ -87,7 +93,6 @@ class SubjectRating:
         
         for trace in traces: fig.add_trace(trace)
         self._update_fig(fig, f'Командный рейтинг на {self.subjToOl[self.subject]}', 'Год', 'Место в рейтинге')
-
         with open(f'exports/html/{self.subject}.html', 'w') as f:
             f.write(fig.to_html(include_plotlyjs='cdn'))
         fig.write_image(f'exports/svg/{self.subject}.svg')

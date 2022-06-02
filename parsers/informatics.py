@@ -1,17 +1,20 @@
+from numpy import place
+
+
 class YearResults:
 
-    def __init__(self, file, isRoundsPresent):
+    def __init__(self, file):
         self.placeToStud = {}
         self.countryToStud = {}
         self.path = file
-        self.isRoundsPresent = isRoundsPresent
 
     def parse(self, file):
-<<<<<<< HEAD
         file = open(file, 'r').readlines()
         arifcount = len(file)
+        for it in range(0, arifcount, 1):
+        	file[it] = file[it].split('\t')[0].split('\n')[0]
         for it in range(0, arifcount, 5):
-        	place = file[it]
+        	place = int(file[it])
         	country = file[it + 1]
         	name = file[it + 2]
         	score = float(file[it + 3])
@@ -21,81 +24,80 @@ class YearResults:
         	student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
         	self.countryToStud[country].append(student)
         	self.placeToStud[place] = student
-=======
-        print(file)
-        file = open(file, 'r').readlines()
-        arifcount = len(file)
-        for it in range(0, arifcount, 5):
-            place = file[it]
-            country = file[it + 1]
-            name = file[it + 2]
-            score = float(file[it + 3])
-            medal = file[it + 4]
-            if country not in self.countryToStud:
-                self.countryToStud[country] = []
-            student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
-            self.countryToStud[country].append(student)
-            self.placeToStud[place] = student
->>>>>>> f1ef3cfa0dbfa5128abda5bb44649e2cd77588e5
     
     def build_rating_based_on_score(self):
         countryToScore = {}
         for country, students in self.countryToStud.items():
-            countryToScore[country] = sum([student['score'] for student in students])
-        
-        scores = list(countryToScore.values())
+            countryToScore[country] = sum([student['score'] for student in students])/len(students)
+
+        scores = list(set(countryToScore.values()))
         scores.sort(reverse=True)
         
         placeToCountry, countryToPlace = {}, {}
         for i, score in enumerate(scores):
             for country, val in countryToScore.items():
                 if score == val:
-                    break
-            # print(f'#{i+1}. {country}. {val}')
-            placeToCountry[i+1] = country
-            countryToPlace[country] = i+1
+                    if i+1 not in placeToCountry:
+                        placeToCountry[i+1] = []
+                    placeToCountry[i+1].append(country)
+                    countryToPlace[country] = i+1
+        return placeToCountry, countryToPlace
+    
+    def build_rating_based_on_place(self):
+        countryToScore = {}
+        for country, students in self.countryToStud.items():
+            countryToScore[country] = sum([student['place'] for student in students])/len(students)
+
+        scores = list(set(countryToScore.values()))
+        scores.sort(reverse=False)
+
+        placeToCountry, countryToPlace = {}, {}
+        for i, score in enumerate(scores):
+            for country, val in countryToScore.items():
+                if score == val:
+                    if i+1 not in placeToCountry:
+                        placeToCountry[i+1] = []
+                    placeToCountry[i+1].append(country)
+                    countryToPlace[country] = i+1
         return placeToCountry, countryToPlace
         
-    def main(self):
-        # self.parse_html('data/2021.html')
-        # self.parse_html('data/2020.html')
-        # self.parse_html('data/2019.html')
-        # self.parse_html_rounds('data/2018.html')
-        # self.parse_html_rounds('data/2017.html')
-        # self.parse_html_rounds('data/2016.html')
-        # self.parse_html('data/2015.html')
-        # self.parse_html_rounds('data/2014.html')
-        # self.parse_html_rounds('data/2013.html')
-        # self.parse_html_rounds('data/2010.html')
+    def mainPlace(self):
+        self.parse(self.path)
+        return self.build_rating_based_on_place()
+        
+    def mainScore(self):
         self.parse(self.path)
         return self.build_rating_based_on_score()
-
+	
 def export_ratings_based_on_score(countries):
-    BASE = 'data/informatics/'
-    YEARS = '2021|T 2020|T 2019|T 2018|T 2017|T 2016|T 2015|T 2014|T 2013|T 2012|T 2011|T 2010|T'
-    # YEARS = '2018'
-    yearToPlace = {}
-    for year_and_bool in YEARS.split(' '):
-        year, prebool = year_and_bool.split('|')
-        if prebool == 'T': actbool = True
-        else: actbool = False
-<<<<<<< HEAD
-        yr = YearResults(BASE + f'{year}.out', 1)
-=======
-        yr = YearResults(BASE + f'{year}.txt', 1)
->>>>>>> f1ef3cfa0dbfa5128abda5bb44649e2cd77588e5
-        placeToCountry, countryToPlace = yr.main()
-        yearToPlace[year] = {}
-        for country in countries:
-            if country in countryToPlace:
-                yearToPlace[year][country] = countryToPlace[country]
-        yearToPlace[year]['total'] = len(countryToPlace.keys())
-    return yearToPlace
+	BASE = 'data/informatics/'
+	YEARS = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
+	yearToPlace = {}
+	for year in YEARS.split(' '):
+		yr = YearResults(BASE + f'{year}.txt')
+		placeToCountry, countryToPlace = yr.mainScore()
+		yearToPlace[year] = {}
+		for country in countries:
+			if country in countryToPlace:
+				yearToPlace[year][country] = countryToPlace[country]
+		yearToPlace[year]['total'] = len(countryToPlace.keys())
+	return yearToPlace
+
+def export_ratings_based_on_place(countries):
+	BASE = 'data/informatics/'
+	YEARS = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
+	yearToPlace = {}
+	for year in YEARS.split(' '):
+		yr = YearResults(BASE + f'{year}.txt')
+		placeToCountry, countryToPlace = yr.mainPlace()
+		yearToPlace[year] = {}
+		for country in countries:
+			if country in countryToPlace:
+				yearToPlace[year][country] = countryToPlace[country]
+		yearToPlace[year]['total'] = len(countryToPlace.keys())
+	return yearToPlace
 
 
-<<<<<<< HEAD
 #o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
-=======
-o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
->>>>>>> f1ef3cfa0dbfa5128abda5bb44649e2cd77588e5
+#o = export_ratings_based_on_place(('KZ', 'UZ', 'RU'))
 #print(o)
