@@ -1,5 +1,13 @@
 from numpy import place
 
+def getMedal(self):
+    if self == "Gold":
+    	return 3
+    if self == "Silver":
+    	return 2
+    if self == "Bronze":
+    	return 1
+    return 0				
 
 class YearResults:
 
@@ -42,6 +50,24 @@ class YearResults:
                     placeToCountry[i+1].append(country)
                     countryToPlace[country] = i+1
         return placeToCountry, countryToPlace
+	 
+    def build_rating_based_on_medal(self):
+        countryToScore = {}
+        for country, students in self.countryToStud.items():
+            countryToScore[country] = sum([getMedal(student['medal']) for student in students])/len(students)
+
+        scores = list(set(countryToScore.values()))
+        scores.sort(reverse=True)
+        
+        placeToCountry, countryToPlace = {}, {}
+        for i, score in enumerate(scores):
+        	for country, val in countryToScore.items():
+        		if score == val:
+        			if i+1 not in placeToCountry:
+        				placeToCountry[i+1] = []
+        			placeToCountry[i+1].append(country)
+        			countryToPlace[country] = i+1
+        return placeToCountry, countryToPlace
     
     def build_rating_based_on_place(self):
         countryToScore = {}
@@ -53,17 +79,21 @@ class YearResults:
 
         placeToCountry, countryToPlace = {}, {}
         for i, score in enumerate(scores):
-            for country, val in countryToScore.items():
-                if score == val:
-                    if i+1 not in placeToCountry:
-                        placeToCountry[i+1] = []
-                    placeToCountry[i+1].append(country)
-                    countryToPlace[country] = i+1
+        	for country, val in countryToScore.items():
+        		if score == val:
+        			if i+1 not in placeToCountry:
+        				placeToCountry[i+1] = []
+        			placeToCountry[i+1].append(country)
+        			countryToPlace[country] = i+1
         return placeToCountry, countryToPlace
         
     def mainPlace(self):
         self.parse(self.path)
         return self.build_rating_based_on_place()
+        
+    def mainMedal(self):
+        self.parse(self.path)
+        return self.build_rating_based_on_medal()
         
     def mainScore(self):
         self.parse(self.path)
@@ -76,6 +106,20 @@ def export_ratings_based_on_score(countries):
 	for year in YEARS.split(' '):
 		yr = YearResults(BASE + f'{year}.txt')
 		placeToCountry, countryToPlace = yr.mainScore()
+		yearToPlace[year] = {}
+		for country in countries:
+			if country in countryToPlace:
+				yearToPlace[year][country] = countryToPlace[country]
+		yearToPlace[year]['total'] = len(countryToPlace.keys())
+	return yearToPlace
+
+def export_ratings_based_on_medal(countries):
+	BASE = 'data/informatics/'
+	YEARS = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
+	yearToPlace = {}
+	for year in YEARS.split(' '):
+		yr = YearResults(BASE + f'{year}.txt')
+		placeToCountry, countryToPlace = yr.mainMedal()
 		yearToPlace[year] = {}
 		for country in countries:
 			if country in countryToPlace:
@@ -100,4 +144,5 @@ def export_ratings_based_on_place(countries):
 
 #o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
 #o = export_ratings_based_on_place(('KZ', 'UZ', 'RU'))
+#o = export_ratings_based_on_medal(('KZ', 'UZ', 'KG'))
 #print(o)
