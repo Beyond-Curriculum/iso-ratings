@@ -41,3 +41,22 @@
 ## Known issues
 
 Результаты IPhO некоторых годов (2016-2020) указаны только для медалистов и обладателей ПГ. За счет этого подсчет рейтинга по позициям может быть не самым справедливым.
+
+## Results
+
+### Зачет по сумме баллов
+
+![Зачет по баллам с аннотациями](/exports/svg/total-score-absolute.svg)
+![Зачет по баллам](/exports/svg/total-score-compare.svg)
+
+### Зачет по положению в абсолютном рейтинге
+
+![Зачет по месту с аннотациями](/exports/svg/total-position-absolute.svg)
+![Зачет по месту](/exports/svg/total-position-compare.svg)
+
+### Зачет по медалям (олимпийский зачет)
+
+![Зачет по медалям с аннотациями](/exports/svg/total-medals-absolute.svg)
+![Зачет по медалям](/exports/svg/total-medals-compare.svg)
+
+![Cтатистика медального зачета](/exports/svg/total-medal-stats.svg)
