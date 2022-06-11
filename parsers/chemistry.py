@@ -61,10 +61,10 @@ class YearResults:
             self.countryToStud[country].append(student)
             self.placeToStud[place] = student
         
-    def _build_rating(self, data):
+    def _build_rating(self, data, reverse):
         # data - countryToScore
         scores = list(set(data.values()))
-        scores.sort(reverse=True)
+        scores.sort(reverse=reverse)
         
         placeToCountry, countryToPlace = {}, {}
         for i, score in enumerate(scores):
@@ -80,19 +80,19 @@ class YearResults:
         countryToScore = {}
         for country, students in self.countryToStud.items():
             countryToScore[country] = sum([student['score'] for student in students])
+        return self._build_rating(countryToScore, True)
+        # scores = list(set(countryToScore.values()))
+        # scores.sort(reverse=True)
         
-        scores = list(set(countryToScore.values()))
-        scores.sort(reverse=True)
-        
-        placeToCountry, countryToPlace = {}, {}
-        for i, score in enumerate(scores):
-            for country, val in countryToScore.items():
-                if score == val:
-                    if i+1 not in placeToCountry:
-                        placeToCountry[i+1] = []
-                    placeToCountry[i+1].append(country)
-                    countryToPlace[country] = i+1
-        return placeToCountry, countryToPlace
+        # placeToCountry, countryToPlace = {}, {}
+        # for i, score in enumerate(scores):
+        #     for country, val in countryToScore.items():
+        #         if score == val:
+        #             if i+1 not in placeToCountry:
+        #                 placeToCountry[i+1] = []
+        #             placeToCountry[i+1].append(country)
+        #             countryToPlace[country] = i+1
+        # return placeToCountry, countryToPlace
 
     def build_rating_based_on_medals(self):
         countryToScore = {}
@@ -141,6 +141,12 @@ class YearResults:
                 countryToPlace[country] = place
         return placeToCountry, countryToPlace
         
+    def build_rating_based_on_position(self):
+        countryToScore = {}
+        for country, students in self.countryToStud.items():
+            countryToScore[country] = sum([student['place'] for student in students])
+        return self._build_rating(countryToScore, False)
+
     def main(self, mode):
         if self.isRoundsPresent:
             self.parse_html_rounds(self.path)
@@ -150,6 +156,8 @@ class YearResults:
             return self.build_rating_based_on_score()
         elif mode == 'medals':
             return self.build_rating_based_on_medals()
+        elif mode == 'position':
+            return self.build_rating_based_on_position()
 
 def create_ratings(countries, mode):
     BASE = 'data/chemistry/'
@@ -175,7 +183,13 @@ def export_ratings_based_on_score(countries):
 def export_ratings_based_on_medals(countries):
     return create_ratings(countries, 'medals')
 
+def export_ratings_based_on_position(countries):
+    return create_ratings(countries, 'position')
+
 # o = export_ratings_based_on_medals(('KZ', 'UZ', 'RU'))
+# print(o)
+
+# o = export_ratings_based_on_position(('KZ', 'UZ', 'RU'))
 # print(o)
 
 # 2021 - 21/79
