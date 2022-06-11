@@ -1,5 +1,8 @@
 # парсинг идет со скорборда
 
+from venv import create
+
+
 class YearResults:
 
     def __init__(self, file, isRoundsPresent):
@@ -57,6 +60,21 @@ class YearResults:
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
             self.countryToStud[country].append(student)
             self.placeToStud[place] = student
+        
+    def _build_rating(self, data):
+        # data - countryToScore
+        scores = list(set(data.values()))
+        scores.sort(reverse=True)
+        
+        placeToCountry, countryToPlace = {}, {}
+        for i, score in enumerate(scores):
+            for country, val in data.items():
+                if score == val:
+                    if i+1 not in placeToCountry:
+                        placeToCountry[i+1] = []
+                    placeToCountry[i+1].append(country)
+                    countryToPlace[country] = i+1
+        return placeToCountry, countryToPlace
     
     def build_rating_based_on_score(self):
         countryToScore = {}
@@ -75,15 +93,65 @@ class YearResults:
                     placeToCountry[i+1].append(country)
                     countryToPlace[country] = i+1
         return placeToCountry, countryToPlace
+
+    def build_rating_based_on_medals(self):
+        countryToScore = {}
+        for country, students in self.countryToStud.items():
+            countryToScore[country] = {'gold': 0, 'silver': 0, 'bronze': 0}
+            for student in students:
+                medal = student['medal']
+                if medal:
+                    medal = medal.lower()
+                    countryToScore[country][medal] +=1
+
+        # print(countryToScore)
+        # Medal Sort
+        rank = sorted(list(countryToScore.keys()), key = lambda e: (countryToScore[e]['gold'], countryToScore[e]['silver'], countryToScore[e]['bronze']))
+        total = len(rank)
+        placeToCountry = {}
+        place = 1
+        prevCountry = None
+        for i in range(1, total+1):
+            country = rank[total-i]
+            if i == 1:
+                placeToCountry[place] = [country,]
+                prevCountry = country
+            else:
+                cur = countryToScore[country]
+                prev = countryToScore[prevCountry]
+                # print(cur, prev, country, prevCountry)
+                if cur['gold'] == prev['gold']:
+                    if cur['silver'] == prev['silver']:
+                        if cur['bronze'] == prev['bronze']:
+                            placeToCountry[place].append(country)
+                        else:
+                            place += 1
+                            placeToCountry[place] = [country,]
+                    else:
+                        place += 1
+                        placeToCountry[place] = [country,]
+                else:
+                    place += 1
+                    placeToCountry[place] = [country,]
+                prevCountry = country
+
+        countryToPlace = {}
+        for place, countries in placeToCountry.items():
+            for country in countries:
+                countryToPlace[country] = place
+        return placeToCountry, countryToPlace
         
-    def main(self):
+    def main(self, mode):
         if self.isRoundsPresent:
             self.parse_html_rounds(self.path)
         else:
             self.parse_html(self.path)
-        return self.build_rating_based_on_score()
+        if mode == 'score':
+            return self.build_rating_based_on_score()
+        elif mode == 'medals':
+            return self.build_rating_based_on_medals()
 
-def export_ratings_based_on_score(countries):
+def create_ratings(countries, mode):
     BASE = 'data/chemistry/'
     YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
     # YEARS = '2018'
@@ -93,13 +161,22 @@ def export_ratings_based_on_score(countries):
         if prebool == 'T': actbool = True
         else: actbool = False
         yr = YearResults(BASE + f'{year}.txt', actbool)
-        placeToCountry, countryToPlace = yr.main()
+        placeToCountry, countryToPlace = yr.main(mode)
         yearToPlace[year] = {}
         for country in countries:
             if country in countryToPlace: #funny - uzbekistan didn't participate in 2010
                 yearToPlace[year][country] = countryToPlace[country]
         yearToPlace[year]['total'] = len(countryToPlace.keys())
     return yearToPlace
+
+def export_ratings_based_on_score(countries):
+    return create_ratings(countries, 'score')
+
+def export_ratings_based_on_medals(countries):
+    return create_ratings(countries, 'medals')
+
+# o = export_ratings_based_on_medals(('KZ', 'UZ', 'RU'))
+# print(o)
 
 # 2021 - 21/79
 # 2020 - 27/59
