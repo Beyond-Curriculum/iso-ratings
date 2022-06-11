@@ -2,9 +2,9 @@ from numpy import place
 
 def getMedal(self):
     if self == "Gold":
-    	return 3
+    	return 100
     if self == "Silver":
-    	return 2
+    	return 10
     if self == "Bronze":
     	return 1
     return 0				
@@ -54,8 +54,13 @@ class YearResults:
     def build_rating_based_on_medal(self):
         countryToScore = {}
         for country, students in self.countryToStud.items():
-            countryToScore[country] = sum([getMedal(student['medal']) for student in students])/len(students)
-
+        	templist = []
+        	for student in students:
+        		templist.append(getMedal(student['medal']))
+        	templist.sort(reverse=True)
+        	while len(templist) > 4 :
+        		templist.pop()
+        	countryToScore[country] = sum(templist)			
         scores = list(set(countryToScore.values()))
         scores.sort(reverse=True)
         
@@ -113,7 +118,7 @@ def export_ratings_based_on_score(countries):
 		yearToPlace[year]['total'] = len(countryToPlace.keys())
 	return yearToPlace
 
-def export_ratings_based_on_medal(countries):
+def export_ratings_based_on_medals(countries):
 	BASE = 'data/informatics/'
 	YEARS = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
 	yearToPlace = {}
@@ -127,7 +132,7 @@ def export_ratings_based_on_medal(countries):
 		yearToPlace[year]['total'] = len(countryToPlace.keys())
 	return yearToPlace
 
-def export_ratings_based_on_place(countries):
+def export_ratings_based_on_position(countries):
 	BASE = 'data/informatics/'
 	YEARS = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
 	yearToPlace = {}
@@ -143,6 +148,6 @@ def export_ratings_based_on_place(countries):
 
 
 #o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
-#o = export_ratings_based_on_place(('KZ', 'UZ', 'RU'))
-#o = export_ratings_based_on_medal(('KZ', 'UZ', 'KG'))
-#print(o)
+#o = export_ratings_based_on_position(('KZ', 'UZ', 'RU'))
+#o = export_ratings_based_on_medals(('KZ', 'UZ', 'JP'))
+print(o)
