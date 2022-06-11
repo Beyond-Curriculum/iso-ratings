@@ -60,6 +60,30 @@ class YearResults:
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
             self.countryToStud[country].append(student)
             self.placeToStud[place] = student
+
+    def parse_html_no_scores(self, file):
+        file = open(file, 'r').readlines()[0]
+        rows = file.split('<tr>')
+        for row in rows:
+            elts = row.split('<td>')
+            if len(elts) == 1: 
+                continue
+            # print(elts)
+            place = int(elts[1].split('</td>')[0])
+            country = elts[2].split('.svg')[0][-2:]
+            name = elts[3].split('</td>')[0]
+            # score = float(elts[4].split('</td>')[0])
+            # print(place, country, name)
+            if 'medal' in elts[4]: 
+                medal = elts[4].split('medal">')[-1].split('</div>')[0]
+            else:
+                medal = None
+            # print(place, country, name, medal)
+            if country not in self.countryToStud:
+                self.countryToStud[country] = []
+            student = {'place': place, 'name': name, 'country': country, 'medal': medal}
+            self.countryToStud[country].append(student)
+            self.placeToStud[place] = student
         
     def _build_rating(self, data, reverse):
         # data - countryToScore
@@ -148,7 +172,9 @@ class YearResults:
         return self._build_rating(countryToScore, False)
 
     def main(self, mode):
-        if self.isRoundsPresent:
+        if self.isRoundsPresent == None:
+            self.parse_html_no_scores(self.path)
+        elif self.isRoundsPresent:
             self.parse_html_rounds(self.path)
         else:
             self.parse_html(self.path)
@@ -159,15 +185,19 @@ class YearResults:
         elif mode == 'position':
             return self.build_rating_based_on_position()
 
-def create_ratings(countries, mode):
+# co = YearResults('data/chemistry/2011.txt', None)
+# o = co.main('medals')
+# print(o)
+
+def create_ratings(countries, mode, years):
     BASE = 'data/chemistry/'
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
     # YEARS = '2018'
     yearToPlace = {}
-    for year_and_bool in YEARS.split(' '):
+    for year_and_bool in years.split(' '):
         year, prebool = year_and_bool.split('|')
         if prebool == 'T': actbool = True
-        else: actbool = False
+        elif prebool == 'F': actbool = False
+        elif prebool == 'N': actbool = None
         yr = YearResults(BASE + f'{year}.txt', actbool)
         placeToCountry, countryToPlace = yr.main(mode)
         yearToPlace[year] = {}
@@ -178,13 +208,16 @@ def create_ratings(countries, mode):
     return yearToPlace
 
 def export_ratings_based_on_score(countries):
-    return create_ratings(countries, 'score')
+    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
+    return create_ratings(countries, 'score', YEARS)
 
 def export_ratings_based_on_medals(countries):
-    return create_ratings(countries, 'medals')
+    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    return create_ratings(countries, 'medals', YEARS)
 
 def export_ratings_based_on_position(countries):
-    return create_ratings(countries, 'position')
+    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    return create_ratings(countries, 'position', YEARS)
 
 # o = export_ratings_based_on_medals(('KZ', 'UZ', 'RU'))
 # print(o)

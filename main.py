@@ -8,6 +8,11 @@ import time
 class SubjectRating:
 
     def __init__(self, parser, subject):
+        self.modeToParser = {
+            'score': parser.export_ratings_based_on_score,
+            'medals': parser.export_ratings_based_on_medals,
+            'position': parser.export_ratings_based_on_position
+        }
         self.parser = parser.export_ratings_based_on_score
         self.subject = subject
         self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO', 'informatics': 'IOI'}
@@ -113,14 +118,14 @@ class SubjectRating:
         else:
             return go.Scatter(x=xVals, y=yVals, mode='markers+lines', name=country, text=yVals, marker_color=color)
 
-    def plot(self, countries):
+    def plot(self, countries, mode):
         # ---- тупой костыль (нужен чтобы на пдфках не было текста о непрогрузке mathjax)
         ran_fig = go.Figure(data = go.Scatter(x=[0,1,2,3], y=[0,1,4,9]))
         ran_fig.write_image('random.pdf')
         time.sleep(2) 
         # ---- конец тупого костыля
-
-        yearToPlace = self.parser(countries)
+        colors = ['#090C9B', '#09814A', '#EF3E36', '#242423']
+        yearToPlace = self.modeToParser[mode](countries)
         fig = go.Figure()
         traces = []
         for country in countries:
@@ -129,21 +134,23 @@ class SubjectRating:
                 if country in data:
                     xVals.append(int(year))
                     yVals.append(data[country])
-            trace = self._create_trace(xVals, yVals, country)
+            trace = self._create_trace(xVals, yVals, country, colors)
             traces.append(trace)
         
         for trace in traces: fig.add_trace(trace)
         self._update_fig(fig, f'Командный рейтинг на {self.subjToOl[self.subject]}', 'Год', 'Место в рейтинге')
-        with open(f'exports/html/{self.subject}.html', 'w') as f:
+        with open(f'exports/html/{self.subject}-{mode}.html', 'w') as f:
             f.write(fig.to_html(include_plotlyjs='cdn'))
-        fig.write_image(f'exports/svg/{self.subject}.svg')
-        fig.write_image(f'exports/pdf/{self.subject}.pdf')
-        fig.write_image(f'exports/jpg/{self.subject}.jpg', scale=5.0)
+        fig.write_image(f'exports/svg/{self.subject}-{mode}.svg')
+        fig.write_image(f'exports/pdf/{self.subject}-{mode}.pdf')
+        fig.write_image(f'exports/jpg/{self.subject}-{mode}.jpg', scale=5.0)
 
 
 
-# chemObj = SubjectRating(parsers.chemistry, 'chemistry')
-# chemObj.plot(('KZ', 'UZ', 'RU', 'total'))
+chemObj = SubjectRating(parsers.chemistry, 'chemistry')
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 
 # mathObj = SubjectRating(parsers.mathematics, 'mathematics')
 # mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
@@ -215,6 +222,6 @@ class CombinedPlot(SubjectRating):
         self.plot_on_score(countries, colors)
     
 
-combObj = CombinedPlot()
-combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'])
-combObj.main(('KZ', 'RU', 'total'), colors = ['#090C9B', '#EF3E36', '#242423'])
+# combObj = CombinedPlot()
+# combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'])
+# combObj.main(('KZ', 'RU', 'total'), colors = ['#090C9B', '#EF3E36', '#242423'])
