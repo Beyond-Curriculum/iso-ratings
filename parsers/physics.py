@@ -157,14 +157,28 @@ class YearResults:
         for country, students in self.countryToStud.items():
             countryToScore[country] = sum([student['place'] for student in students])/len(students)
         return self._build_rating(countryToScore, False)
+    
+    def get_medal_statistics(self):
+        placeToCountry, countryToPlace = self.build_rating_based_on_medals()
+        KZ_place = countryToPlace['KZ']
+        max_place = max(list(placeToCountry.keys()))
+        total = len(countryToPlace)
+        above = 0
+        for i in range(1, KZ_place):
+            above += len(placeToCountry[i])
+        
+        data_quant = {'kz_place': KZ_place, 'max_place': max_place, 'above': above, 'total': total}
+        return data_quant
 
-    def main(self, mode):
+    def main(self):
         if self.isRoundsPresent == None:
             self.parse_html_no_scores(self.path)
         elif self.isRoundsPresent:
             self.parse_html_rounds(self.path)
         else:
             self.parse_html(self.path)
+    
+    def plot(self, mode):
         if mode == 'score':
             return self.build_rating_based_on_score()
         elif mode == 'medals':
@@ -186,7 +200,8 @@ def create_ratings(countries, mode, years):
         elif prebool == 'F': actbool = False
         elif prebool == 'N': actbool = None
         yr = YearResults(BASE + f'{year}.txt', actbool)
-        placeToCountry, countryToPlace = yr.main(mode)
+        yr.main()
+        placeToCountry, countryToPlace = yr.plot(mode)
         yearToPlace[year] = {}
         for country in countries:
             if country in countryToPlace: #funny - uzbekistan didn't participate in 2010
@@ -214,4 +229,20 @@ def export_ratings_based_on_position(countries):
 
 # o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
 # print(o)
+
+def export_medal_statistics():
+    BASE = 'data/physics/'
+    years = '2010|N 2011|N 2012|N 2013|N 2014|N 2015|N 2016|N 2017|N 2018|N 2019|N 2020|N 2021|T'
+    # years = '2021|F'
+    yearToData = {}
+    for year_and_bool in years.split(' '):
+        year, prebool = year_and_bool.split('|')
+        if prebool == 'T': actbool = True
+        elif prebool == 'F': actbool = False
+        elif prebool == 'N': actbool = None
+        yr = YearResults(BASE + f'{year}.txt', actbool)
+        yr.main()
+        data_elt = yr.get_medal_statistics()
+        yearToData[year] = data_elt
+    return yearToData    
 

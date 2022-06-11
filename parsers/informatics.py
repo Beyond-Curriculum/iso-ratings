@@ -103,6 +103,19 @@ class YearResults:
 	def mainScore(self):
 		self.parse(self.path)
 		return self.build_rating_based_on_score()
+
+	def get_medal_statistics(self):
+		self.parse(self.path)
+		placeToCountry, countryToPlace = self.build_rating_based_on_medal()
+		KZ_place = countryToPlace['KZ']
+		max_place = max(list(placeToCountry.keys()))
+		total = len(countryToPlace)
+		above = 0
+		for i in range(1, KZ_place):
+			above += len(placeToCountry[i])
+		
+		data_quant = {'kz_place': KZ_place, 'max_place': max_place, 'above': above, 'total': total}
+		return data_quant
 	
 def export_ratings_based_on_score(countries):
 	BASE = 'data/informatics/'
@@ -146,6 +159,16 @@ def export_ratings_based_on_position(countries):
 		yearToPlace[year]['total'] = len(countryToPlace.keys())
 	return yearToPlace
 
+def export_medal_statistics():
+    BASE = 'data/informatics/'
+    years = '2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010'
+    # years = '2021|F'
+    yearToData = {}
+    for year in years.split(' '):
+        yr = YearResults(BASE + f'{year}.txt')
+        data_elt = yr.get_medal_statistics()
+        yearToData[year] = data_elt
+    return yearToData   
 
 #o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
 #o = export_ratings_based_on_position(('KZ', 'UZ', 'RU'))
