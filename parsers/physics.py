@@ -15,6 +15,7 @@ class YearResults:
             elts = row.split('<td>')
             if len(elts) == 1: 
                 continue
+            # print(elts)
             place = int(elts[1].split('</td>')[0])
             country = elts[2].split('.svg')[0][-2:]
             name = elts[3].split('</td>')[0]
@@ -100,20 +101,9 @@ class YearResults:
     def build_rating_based_on_score(self):
         countryToScore = {}
         for country, students in self.countryToStud.items():
-            countryToScore[country] = sum([student['score'] for student in students])
+            countryToScore[country] = sum([student['score'] for student in students])/len(students)
         return self._build_rating(countryToScore, True)
-        # scores = list(set(countryToScore.values()))
-        # scores.sort(reverse=True)
-        
-        # placeToCountry, countryToPlace = {}, {}
-        # for i, score in enumerate(scores):
-        #     for country, val in countryToScore.items():
-        #         if score == val:
-        #             if i+1 not in placeToCountry:
-        #                 placeToCountry[i+1] = []
-        #             placeToCountry[i+1].append(country)
-        #             countryToPlace[country] = i+1
-        # return placeToCountry, countryToPlace
+
 
     def build_rating_based_on_medals(self):
         countryToScore = {}
@@ -165,7 +155,7 @@ class YearResults:
     def build_rating_based_on_position(self):
         countryToScore = {}
         for country, students in self.countryToStud.items():
-            countryToScore[country] = sum([student['place'] for student in students])
+            countryToScore[country] = sum([student['place'] for student in students])/len(students)
         return self._build_rating(countryToScore, False)
 
     def main(self, mode):
@@ -182,12 +172,12 @@ class YearResults:
         elif mode == 'position':
             return self.build_rating_based_on_position()
 
-# co = YearResults('data/chemistry/2011.txt', None)
-# o = co.main('medals')
+# co = YearResults('data/physics/2020.txt', None)
+# o = co.main('position')
 # print(o)
 
 def create_ratings(countries, mode, years):
-    BASE = 'data/chemistry/'
+    BASE = 'data/physics/'
     # YEARS = '2018'
     yearToPlace = {}
     for year_and_bool in years.split(' '):
@@ -205,15 +195,15 @@ def create_ratings(countries, mode, years):
     return yearToPlace
 
 def export_ratings_based_on_score(countries):
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
+    YEARS = '2021|T'
     return create_ratings(countries, 'score', YEARS)
 
 def export_ratings_based_on_medals(countries):
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    YEARS = '2010|N 2011|N 2012|N 2013|N 2014|N 2015|N 2016|N 2017|N 2018|N 2019|N 2020|N 2021|T'
     return create_ratings(countries, 'medals', YEARS)
 
 def export_ratings_based_on_position(countries):
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    YEARS = '2010|N 2011|N 2012|N 2013|N 2014|N 2015|N 2016|N 2018|N 2019|N 2020|N 2021|T'
     return create_ratings(countries, 'position', YEARS)
 
 # o = export_ratings_based_on_medals(('KZ', 'UZ', 'RU'))
@@ -224,3 +214,4 @@ def export_ratings_based_on_position(countries):
 
 # o = export_ratings_based_on_score(('KZ', 'UZ', 'RU'))
 # print(o)
+

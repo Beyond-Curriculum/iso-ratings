@@ -106,5 +106,10 @@ def export_ratings_based_on_score(countries):
         yearToPlace[year]['total'] = len(countryToPlace.keys())
     return yearToPlace
 
+def export_ratings_based_on_medals(countries):
+    raise NotImplementedError
+
+def export_ratings_based_on_position(countries):
+    raise NotImplementedError
 # o = export_ratings_based_on_score(('KZ', 'HK', 'IN'))
 # print(o)

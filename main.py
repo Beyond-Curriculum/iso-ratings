@@ -1,6 +1,8 @@
 import parsers.chemistry
 import parsers.mathematics
 import parsers.informatics
+import parsers.physics
+import parsers.biology
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import time
@@ -15,7 +17,7 @@ class SubjectRating:
         }
         self.parser = parser.export_ratings_based_on_score
         self.subject = subject
-        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO', 'informatics': 'IOI'}
+        self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO', 'informatics': 'IOI', 'biology': 'IBO', 'physics': 'IPhO'}
 
     def _update_fig(self, figure, title, xAxis, yAxis, row=None, col=None):
         if not row:
@@ -147,16 +149,28 @@ class SubjectRating:
 
 
 
-chemObj = SubjectRating(parsers.chemistry, 'chemistry')
-chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
-chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
-chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
+# chemObj = SubjectRating(parsers.chemistry, 'chemistry')
+# chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+# chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+# chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 
 # mathObj = SubjectRating(parsers.mathematics, 'mathematics')
-# mathObj.plot(('KZ', 'UZ', 'RU', 'total'))
+# mathObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
 
 # csObj = SubjectRating(parsers.informatics, 'informatics')
-# csObj.plot(('KZ', 'UZ', 'RU', 'total'))
+# csObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+# csObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+# csObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
+
+physObj = SubjectRating(parsers.physics, 'physics')
+physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
+
+# bioObj = SubjectRating(parsers.biology, 'biology')
+# bioObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+# bioObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+# bioObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 
 
 class CombinedPlot(SubjectRating):
