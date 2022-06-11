@@ -18,6 +18,7 @@ class SubjectRating:
         self.parser = parser.export_ratings_based_on_score
         self.subject = subject
         self.subjToOl = {'chemistry': 'IChO', 'mathematics': 'IMO', 'informatics': 'IOI', 'biology': 'IBO', 'physics': 'IPhO'}
+        self.showPlaces = True
 
     def _update_fig(self, figure, title, xAxis, yAxis, row=None, col=None):
         if not row:
@@ -123,7 +124,7 @@ class SubjectRating:
 
 
     def _create_trace(self, xVals, yVals, country, color):
-        if country in {'KZ', 'total'}:
+        if country in {'KZ', 'total'} and self.showPlaces:
             return go.Scatter(x=xVals, y=yVals, mode='markers+lines+text', name=country, text=yVals, marker_color=color, textposition="top center")
         else:
             return go.Scatter(x=xVals, y=yVals, mode='markers+lines', name=country, text=yVals, marker_color=color)
@@ -188,7 +189,7 @@ class CombinedPlot(SubjectRating):
     def __init__(self):
         self.parsers = {'score' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics,  'bio': parsers.biology},
             'medals' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics, 'bio': parsers.biology, 'phys': parsers.physics},
-            'position' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics, 'bio': parsers.biology, 'phys': parsers.physics}}
+            'position' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics, 'bio': parsers.biology}}
         # self.subjToData = {}
         self.subplotTitles = {'chem': 'Командный рейтинг на IChO',
                                 'math': 'Командный рейтинг на IMO',
@@ -202,7 +203,7 @@ class CombinedPlot(SubjectRating):
             'position': 'Рейтинг по положению учеников в абсолютном рейтинге'
         }
 
-    def plot(self, countries, colors, mode):
+    def plot(self, countries, colors, mode, suffix):
         # ---- тупой костыль (нужен чтобы на пдфках не было текста о непрогрузке mathjax)
         ran_fig = go.Figure(data = go.Scatter(x=[0,1,2,3], y=[0,1,4,9]))
         ran_fig.write_image('random.pdf')
@@ -257,18 +258,19 @@ class CombinedPlot(SubjectRating):
 
         factor = (len(self.parsers[mode]))//2+(len(self.parsers[mode]))%2
         fig.update_layout(height=360*factor)
-        fig.write_image(f'exports/svg/total-{mode}.svg')
-        fig.write_image(f'exports/pdf/total-{mode}.pdf')
-        fig.write_image(f'exports/jpg/total-{mode}.jpg', scale=5.0)
+        fig.write_image(f'exports/svg/total-{mode}{suffix}.svg')
+        fig.write_image(f'exports/pdf/total-{mode}{suffix}.pdf')
+        fig.write_image(f'exports/jpg/total-{mode}{suffix}.jpg', scale=5.0)
 
 
 
-    def main(self, countries, colors):
-        self.plot(countries, colors, 'score')
-        self.plot(countries, colors, 'medals')
-        self.plot(countries, colors, 'position')
+    def main(self, countries, colors, showPlaces, suffix):
+        self.showPlaces = showPlaces
+        self.plot(countries, colors, 'score', suffix)
+        self.plot(countries, colors, 'medals', suffix)
+        self.plot(countries, colors, 'position', suffix)
     
 
 combObj = CombinedPlot()
-# combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'])
-combObj.main(('KZ', 'RU', 'total'), colors = ['#090C9B', '#EF3E36', '#242423'])
+combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'], showPlaces=False, suffix='-compare')
+combObj.main(('KZ', 'total'), colors = ['#090C9B', '#242423'], showPlaces=True, suffix='-absolute')
