@@ -109,7 +109,15 @@ class SubjectRating:
                     size=12,
                     color='rgb(51, 51, 51)',
                 ), row=row, col=col)
-            figure.update_layout(height=720)
+            figure.update_layout(
+                title={
+                    'text': f"<b>{title}</b>",
+                    'y':0.97,
+                    'x':0.5,
+                    'xanchor': 'center',
+                    'yanchor': 'top',
+                    'font': dict(color='#333333'), })
+            
             # figure.update_annotations(font=dict(size=16, color='#333333'),
             #     x=0.5, y=0.99, yanchor='top')
 
@@ -156,16 +164,18 @@ class SubjectRating:
 
 # mathObj = SubjectRating(parsers.mathematics, 'mathematics')
 # mathObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+# mathObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+# mathObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 
 # csObj = SubjectRating(parsers.informatics, 'informatics')
 # csObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
 # csObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
 # csObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 
-physObj = SubjectRating(parsers.physics, 'physics')
-physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
-physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
-physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
+# physObj = SubjectRating(parsers.physics, 'physics')
+# physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+# physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+# physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 
 # bioObj = SubjectRating(parsers.biology, 'biology')
 # bioObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
@@ -176,16 +186,34 @@ physObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
 class CombinedPlot(SubjectRating):
 
     def __init__(self):
-        self.parsers = {'score' : {'chem': parsers.chemistry, 'math': parsers.mathematics, 'cs': parsers.informatics}}
+        self.parsers = {'score' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics,  'bio': parsers.biology},
+            'medals' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics, 'bio': parsers.biology, 'phys': parsers.physics},
+            'position' : {'chem': parsers.chemistry, 'cs': parsers.informatics, 'math': parsers.mathematics, 'bio': parsers.biology, 'phys': parsers.physics}}
         # self.subjToData = {}
         self.subplotTitles = {'chem': 'Командный рейтинг на IChO',
                                 'math': 'Командный рейтинг на IMO',
-                                'cs': 'Командный рейтинг на IOI'}
+                                'cs': 'Командный рейтинг на IOI',
+                                'phys': 'Командный рейтинг на IPhO',
+                                'bio': 'Командный рейтинг на IBO'}
 
-    def plot_on_score(self, countries, colors):
+        self.modeToTitle = {
+            'score': 'Рейтинг по сумме баллов, набранных учениками',
+            'medals': 'Рейтинг по медалям (по олимпийской системе)',
+            'position': 'Рейтинг по положению учеников в абсолютном рейтинге'
+        }
+
+    def plot(self, countries, colors, mode):
+        # ---- тупой костыль (нужен чтобы на пдфках не было текста о непрогрузке mathjax)
+        ran_fig = go.Figure(data = go.Scatter(x=[0,1,2,3], y=[0,1,4,9]))
+        ran_fig.write_image('random.pdf')
+        time.sleep(2) 
+        # ---- конец тупого костыля
         subjToData = {}
-        for subj, parser in self.parsers['score'].items():
-            subjToData[subj] = parser.export_ratings_based_on_score(countries)
+        for subj, parser in self.parsers[mode].items():
+            if mode == 'score': rating = parser.export_ratings_based_on_score(countries)
+            elif mode == 'medals': rating = parser.export_ratings_based_on_medals(countries)
+            elif mode == 'position': rating = parser.export_ratings_based_on_position(countries)
+            subjToData[subj] = rating
 
         subjToTraces = {}
         subplot_titles = []
@@ -215,27 +243,32 @@ class CombinedPlot(SubjectRating):
             for trace in traces:
                 fig.append_trace(trace, i // 2 + 1, i % 2 + 1)
             xpos = 0.23*(2.4* (i % 2) +1)
-            print(xpos)
+            # print(xpos)
             fig.layout.annotations[i].update(x=xpos)
             # fig.update_layout(title_pad=dict(b=109))
             fig.update_annotations(borderpad=20)
         for i in range(numsubj):
-            self._update_fig(fig, '', 'Год', 'Место в рейтинге', row=i//2+1, col=i%2+1)
+            self._update_fig(fig, self.modeToTitle[mode], 'Год', 'Место в рейтинге', row=i//2+1, col=i%2+1)
         
         for i, (subj, data) in enumerate(subjToData.items()):
             total = max([data[year]['total'] for year in data.keys()])
-            print(i//2+1, i%2+1)
+            # print(i//2+1, i%2+1)
             fig.update_yaxes(range=[total+10,-15], row=i//2+1, col=i%2+1)
 
-        fig.write_image(f'exports/svg/total.svg')
-        fig.write_image(f'exports/pdf/total.pdf')
+        factor = (len(self.parsers[mode]))//2+(len(self.parsers[mode]))%2
+        fig.update_layout(height=360*factor)
+        fig.write_image(f'exports/svg/total-{mode}.svg')
+        fig.write_image(f'exports/pdf/total-{mode}.pdf')
+        fig.write_image(f'exports/jpg/total-{mode}.jpg', scale=5.0)
 
 
 
     def main(self, countries, colors):
-        self.plot_on_score(countries, colors)
+        self.plot(countries, colors, 'score')
+        self.plot(countries, colors, 'medals')
+        self.plot(countries, colors, 'position')
     
 
-# combObj = CombinedPlot()
+combObj = CombinedPlot()
 # combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'])
-# combObj.main(('KZ', 'RU', 'total'), colors = ['#090C9B', '#EF3E36', '#242423'])
+combObj.main(('KZ', 'RU', 'total'), colors = ['#090C9B', '#EF3E36', '#242423'])
