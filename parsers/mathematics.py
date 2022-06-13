@@ -163,6 +163,14 @@ class YearResults:
         elif mode == 'position':
             return self.build_rating_based_on_position()
 
+def count_countries_above(data, place):
+    num = 0
+    for i in range(1, place):
+        print(i, data[i], num)
+        num += len(data[i])
+    # print(num)
+    return num+1
+
 def create_ratings(countries, mode, years):
     BASE = 'data/mathematics/'
     # YEARS = '2021|T'
@@ -174,14 +182,17 @@ def create_ratings(countries, mode, years):
         yr = YearResults(BASE + f'{year}.txt', actbool)
         yr.main()
         placeToCountry, countryToPlace = yr.plot(mode)
+        print(placeToCountry)
+        
         yearToPlace[year] = {}
         for country in countries:
             if country in countryToPlace:
-                yearToPlace[year][country] = countryToPlace[country]
+                yearToPlace[year][country] = count_countries_above(placeToCountry, countryToPlace[country]) #countryToPlace[country]
         yearToPlace[year]['total'] = len(countryToPlace.keys())
     return yearToPlace
 
 YEARS = '2021|T 2020|T 2019|T 2018|T 2017|T 2016|T 2015|T 2014|T 2013|T 2012|T 2011|T 2010|T'
+# YEARS = '2021|T'
 
 def export_ratings_based_on_score(countries):
     return create_ratings(countries, 'score', YEARS)
@@ -191,6 +202,7 @@ def export_ratings_based_on_medals(countries):
 
 def export_ratings_based_on_position(countries):
     return create_ratings(countries, 'position', YEARS)
+
 # o = export_ratings_based_on_score(('KZ', 'HK', 'IN'))
 # print(o)
 
