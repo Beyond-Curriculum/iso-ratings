@@ -249,6 +249,7 @@ class CombinedPlot(SubjectRating):
         self.modeToTitle = {
             'score': 'Рейтинг по сумме баллов, набранных учениками',
             'medals': 'Рейтинг по медалям (по олимпийской системе)',
+            'medals-stats': 'Два взгляда на рейтинг по медалям (олимпийской системе)',
             'position': 'Рейтинг по положению учеников в абсолютном рейтинге'
         }
 
@@ -350,7 +351,8 @@ class CombinedPlot(SubjectRating):
                     yVals.append(stats[key])
                 keyToData[key] = xVals, yVals
             
-            colors = ['#BBBDF6', '#6A4C93', '#DAFFED', '#63ADF2']
+            # colors = ['#BBBDF6', '#6A4C93', '#DAFFED', '#63ADF2']
+            colors = ['#BBBDF6', '#6A4C93', '#F72585', '#3993DD']
             traces.append(self._create_bar_trace(keyToData['total'][0], keyToData['total'][1], colors[0], 'Кол-во стран-участниц', showlegend))
             traces.append(self._create_bar_trace(keyToData['above'][0], keyToData['above'][1], colors[1], 'Кол-во стран, выше РК в рейтинге', showlegend))
             traces.append(self._create_scatter_trace(keyToData['kz_place'][0], keyToData['kz_place'][1], colors[2], 'Место РК в рейтинге', showlegend))
@@ -375,7 +377,7 @@ class CombinedPlot(SubjectRating):
             # fig.update_layout(title_pad=dict(b=109))
             fig.update_annotations(borderpad=20)
         for i in range(numsubj):
-            self._update_fig(fig, self.modeToTitle['medals'], 'Год', 'Место в рейтинге', row=i//2+1, col=i%2+1)
+            self._update_fig(fig, self.modeToTitle['medals-stats'], 'Год', 'Место в рейтинге', row=i//2+1, col=i%2+1)
         
         for i, (subj, data) in enumerate(subjToData.items()):
             total = max([data[year]['total'] for year in data.keys()])
@@ -390,6 +392,6 @@ class CombinedPlot(SubjectRating):
     
 
 combObj = CombinedPlot()
-combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'], showPlaces=False, suffix='-compare')
-combObj.main(('KZ', 'total'), colors = ['#090C9B', '#242423'], showPlaces=True, suffix='-absolute')
+# combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'], showPlaces=False, suffix='-compare')
+# combObj.main(('KZ', 'total'), colors = ['#090C9B', '#242423'], showPlaces=True, suffix='-absolute')
 combObj.medal_stats()
