@@ -14,12 +14,14 @@ class YearResults:
     def parse_html(self, file):
         file = open(file, 'r').readlines()[0]
         rows = file.split('<tr>')
+        # countries = []
         for row in rows:
             elts = row.split('<td>')
             if len(elts) == 1: 
                 continue
             place = int(elts[1].split('</td>')[0])
             country = elts[2].split('.svg')[0][-2:]
+            # countries.append(country)
             name = elts[3].split('</td>')[0]
             score = float(elts[4].split('</td>')[0])
             if 'medal' in elts[5]: 
@@ -32,7 +34,7 @@ class YearResults:
             student = {'place': place, 'name': name, 'country': country, 'score': score, 'medal': medal}
             self.countryToStud[country].append(student)
             self.placeToStud[place] = student
-
+        # print(len(countries))
     def parse_html_rounds(self, file):
         file = open(file, 'r').readlines()[0]
         rows = file.split('<tr>')
@@ -103,6 +105,7 @@ class YearResults:
     def build_rating_based_on_score(self):
         countryToScore = {}
         for country, students in self.countryToStud.items():
+            assert len(students) <= 4, ValueError(f"Country {country} has {len(students)} students, namely: {students}")
             countryToScore[country] = sum([student['score'] for student in students])
         return self._build_rating(countryToScore, True)
         # scores = list(set(countryToScore.values()))
@@ -223,22 +226,23 @@ def create_ratings(countries, mode, years):
     return yearToPlace
 
 def export_ratings_based_on_score(countries):
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
+    YEARS = '2022|F 2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2010|T'
+    # YEARS = '2022|F'
     return create_ratings(countries, 'score', YEARS)
 
 def export_ratings_based_on_medals(countries):
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    YEARS = '2022|F 2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
     return create_ratings(countries, 'medals', YEARS)
 
 def export_ratings_based_on_position(countries):
-    YEARS = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    YEARS = '2022|F 2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
     return create_ratings(countries, 'position', YEARS)
 
 
 def export_medal_statistics():
     BASE = 'data/chemistry/'
-    years = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
-    # years = '2021|F'
+    # years = '2021|F 2020|F 2019|F 2018|T 2017|T 2016|T 2015|F 2014|T 2013|T 2012|N 2011|N 2010|T'
+    years = '2022|F'
     yearToData = {}
     for year_and_bool in years.split(' '):
         year, prebool = year_and_bool.split('|')

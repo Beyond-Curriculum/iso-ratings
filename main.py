@@ -202,11 +202,11 @@ class SubjectRating:
 
 
 
-# chemObj = SubjectRating(parsers.chemistry, 'chemistry')
-# # chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
-# # chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
-# # chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
-# chemObj.medal_stats()
+chemObj = SubjectRating(parsers.chemistry, 'chemistry')
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'medals')
+chemObj.plot(('KZ', 'UZ', 'RU', 'total'), 'position')
+chemObj.medal_stats()
 
 # mathObj = SubjectRating(parsers.mathematics, 'mathematics')
 # # mathObj.plot(('KZ', 'UZ', 'RU', 'total'), 'score')
@@ -392,6 +392,6 @@ class CombinedPlot(SubjectRating):
     
 
 combObj = CombinedPlot()
-combObj.main(('KZ', 'UZ', 'RU', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#242423'], showPlaces=False, suffix='-compare')
+combObj.main(('KZ', 'UZ', 'RU', 'KG', 'total'), colors = ['#090C9B', '#09814A', '#EF3E36', '#944BBB', '#242423'], showPlaces=False, suffix='-compare')
 combObj.main(('KZ', 'total'), colors = ['#090C9B', '#242423'], showPlaces=True, suffix='-absolute')
-# combObj.medal_stats()
+combObj.medal_stats()
